@@ -6,18 +6,20 @@
     --black:#333;
     --white: #ffffff;
     --soft-purple: #eaedf9;
-    --light-green: #75c667;
+    --light-green: #6ce357;
     --red: #ff4040;
     --soft-green:#e4f9d3;    
     --dark-green:#2a836c;   
     --light-grey:#eeeeee; 
-    --soft-grey:#f5f5f5; 
+    --light-text-grey:rgba(56, 59, 73, 0.8); 
+    --soft-grey:#f8f7f7; 
     --warning:#ff6f00;
     --yellow:#e9b63a;
     --grey:#969cb9;
     --purple:#7c43fd;
-    --light-purple:#b1a0dd;
-    --soft-purple:#f3efff;
+    --light-purple:#baa8e7;
+    --soft-purple:#f6f4ff;
+    --dim-purple:#f5f2ff;
     --light-pink:#c560c5;
 
     /* Transition Speed */
@@ -27,9 +29,6 @@
 .success{color:var(--light-green)}
 .ilde{color:var(--yellow)}
 .inactive{color:var(--red)}
-
-
-
 
 
 input:focus{
@@ -60,11 +59,11 @@ a{
 }
 
 .btn{
-    border-radius:4px;
+    border-radius:2px;
     border:none;
-    font-size:15px;
+    font-size:14px;
     font-weight:500;
-    padding:11px 25px;
+    padding:10px 20px;
 }
 .btn.btn-sm{
     padding:6px 12px;
@@ -122,7 +121,8 @@ img{
 }
 
 .bodyWrap{
-    padding:30px
+    padding:30px;
+    margin-top:55px;
 }
 
 .addServices{
@@ -267,7 +267,65 @@ img{
 }
 
 
+/* =========Form Group========= */
+.form-group{
+    position: relative;
+    margin-bottom:20px;
+}
+
+.form-group .form-control{
+    height:55px;
+    border:none;
+    border-bottom:2px solid var(--light-grey)!important;
+    border-radius:0;
+    padding:0;
+    box-shadow:none;
+    font-size:25px;
+    font-weight:700;
+    color:var(--dark-grey);
+}
+.form-group .form-control:focus,
+.form-group .form-control:focus-visible,
+.form-group .form-control:hover{
+    box-shadow:none
+}
+
+.form-group .label{
+    font-size: 12px;    
+    background: var(--white);
+    margin: 0;
+    position: absolute;
+    line-height: normal;
+    top: -10px;    
+    color:var(--dark-grey);
+    opacity: 0.5;
+}
+
+
+
+/*==========Modal==========*/
+
+.modalWrap .modal-title{
+    font-size:16px;    
+    font-weight:700;
+}
+.modalBody{
+    max-width:80%;
+    margin:auto;
+    padding-top:35px;
+    padding-bottom:35px;
+    min-height:250px
+}
+
+
 /* ==========Panel Area========== */
+
+.table{
+    margin-bottom:20px;
+}
+.table>:not(:first-child) {
+    border-top: none;
+}
 
 .panelWrap .panel{
     padding:30px;
@@ -286,6 +344,52 @@ img{
     margin-right:5px;
 }
 
+.panelTable{
+    background:var(--white);
+    border-radius:3px;
+    box-shadow:0 1px 2px 0 rgb(0 0 0 / 10%), 0 2px 1px 0 rgb(0 0 0 / 10%), 0 2px 1px -1px rgb(0 0 0 / 1%);
+}
+.panelTable,
+.panelTable thead tr th{
+    border:none;
+    border-bottom:1px solid var(--light-grey)
+}
+.panelTable thead th{
+    padding:12px 15px;
+    font-size:14px;
+    background:var(--light-grey);
+    font-weight:500;
+    color:var(--light-text-grey);
+}
+.panelTable tbody tr{
+    cursor:pointer;
+}
+.panelTable tbody tr td{
+    font-size:13px;        
+    padding:10px 15px;
+    color:var(--light-text-grey);
+    font-weight:300;    
+}
+.panelTable tbody tr:hover{
+    background:var(--soft-grey)
+}
+
+.panelTable tbody tr td a{
+    color:var(--light-text-grey);
+}
+.panelTable tbody tr td i{
+    font-size:12px;        
+}
+.panelTable tbody tr td i.fas{
+    opacity: 0;
+}
+.panelTable tbody tr td a:hover i.fas{
+    opacity: 1;
+}
+
+.panelTable tbody tr:hover{
+    background:var(--dim-purple);
+}
 /*============avatar===========*/
 .allboard .board .cardsWrap{
     display: block;
@@ -957,6 +1061,10 @@ img{
     display:flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    position: fixed;    
+    left:0;
+    top:55px;
+    z-index: 999;
 }
 .statusBar .leftSide{
     float:left;
@@ -1105,18 +1213,23 @@ img{
 .statusBar .staffList .btn.btn-simple{
     padding-left:0;
     padding-right:0;
-    margin-right:15px;
+    margin-right:10px;
     margin-left:5px;
 }
 .statusBar .staffList .btn.btn-simple i{
     font-size:12px;
 }
 .statusBar .staffList .avtar .snglAvtar span{
-    width:40px;
-    height:40px;
+    width:35px;
+    height:35px;
+    
+    margin-left:-25px;
+}
+.statusBar .staffList .avtar .snglAvtar span i{
+    font-size:12px;
 }
 .statusBar .waitList{
-    margin:0 5px;
+    margin:0 10px;
 }
 .statusBar .currentDate{
     position: relative;
@@ -1247,7 +1360,18 @@ img{
 }
 
 body.settingsPage{
-    background:var(--soft-purple)!important;
+    background:var(--white)!important;
+}
+
+.sideBarMenu{
+    left:0;
+    position: fixed;
+    bottom:0;
+    z-index: 99;
+}
+
+.setBodyDetails{
+    max-width:calc(100% - 240px);
 }
 
 .setWrap .leftSide{    
