@@ -118,13 +118,13 @@
                                     <table class="panelTable table">
                                         <thead>
                                             <tr>
-                                                <th>CONSULTATION</th>
+                                                <th data-bs-toggle="modal" data-bs-target="#catTitle">CONSULTATION</th>
                                                 <th style="width:200px">Scheduling Order</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td>In Salon Consultation </td>
+                                                <td data-bs-toggle="modal" data-bs-target="#inSalon">In Salon Consultation </td>
                                                 <td style="width:200px"><a href="javascript:void(0);">1 <i class="fas fa-pencil"></i></a></td>
                                             </tr>
                                             <tr>
@@ -207,6 +207,52 @@
                                     </table>                                                                        
                                 </div>
                             </div>
+                            <div class="row g-0">
+                                <div class="col panel serblock p-0">
+                                    <table class="panelTable table">
+                                        <thead>
+                                            <tr>
+                                                <th>HAIRCUTS</th>
+                                                <th style="width:200px">Scheduling Order</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Barber Cut  </td>
+                                                <td style="width:200px"><a href="javascript:void(0);">38 <i class="fas fa-pencil"></i></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Short Advanced/ Pixie Cut  </td>
+                                                <td style="width:200px"><a href="javascript:void(0);">39 <i class="fas fa-pencil"></i> </a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Medium/ Long Cut </td>
+                                                <td style="width:200px"><a href="javascript:void(0);">40 <i class="fas fa-pencil"></i> </a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Advanced Cut</td>
+                                                <td style="width:200px"><a href="javascript:void(0);">41 <i class="fas fa-pencil"></i> </a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Bang/Neck Trim</td>
+                                                <td style="width:200px"><a href="javascript:void(0);">44 <i class="fas fa-pencil"></i> </a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Dusting (Dry Trim)  </td>
+                                                <td style="width:200px"><a href="javascript:void(0);">42 <i class="fas fa-pencil"></i> </a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Child's Haircut (Under 10)  </td>
+                                                <td style="width:200px"><a href="javascript:void(0);">43 <i class="fas fa-pencil"></i> </a></td>
+                                            </tr>
+                                            <tr>
+                                                <td> Haircut without Blowout </td>
+                                                <td style="width:200px"><a href="javascript:void(0);">46 <i class="fas fa-pencil"></i> </a></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>                                                                        
+                                </div>
+                            </div>
                         </div> 
                     </div>
                 </div>
@@ -240,7 +286,7 @@
       </div>
 
 
-      <div class="modal modalWrap fade " id="addNewService" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal modalWrap fade" id="addNewService" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
           <div class="modal-content">
             <div class="modal-header">
@@ -249,7 +295,7 @@
             </div>
             <div class="modal-body modalBody row align-items-center">
               <div class="col-12">
-                <form class="row justify-content-center">
+                <form class="row g-0 justify-content-center">
                     <div class="form-group col-12 mb-5">
                         <label for="" class="form-label label">Services Name</label>
                         <input type="text" class="form-control" placeholder="Ex. Hair Cut" />
@@ -275,45 +321,45 @@
                         <h5 class="bigLabel">Which locations provide this service?</h5>                        
                         <input type="search" class="form-control" placeholder="Searh Locations" />
 
-                        <div class="form-check mt-4">
+                        <div class="form-check checkbox mt-4">
                             <input class="form-check-input" type="checkbox" value="" id="bowery">
                             <label class="form-check-label" for="bowery"> Fox and Jane Salon <strong>(Bowery)</strong> </label>
                         </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="bowery">
-                            <label class="form-check-label" for="bowery"> Fox and Jane Salon <strong>(Brooklyn)</strong> </label>
+                        <div class="form-check checkbox">
+                            <input class="form-check-input" type="checkbox" value="" id="Brooklyn">
+                            <label class="form-check-label" for="Brooklyn"> Fox and Jane Salon <strong>(Brooklyn)</strong> </label>
                         </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="bowery">
-                            <label class="form-check-label" for="bowery"> Fox and Jane Salon <strong>(Colorado Springs)</strong> </label>
+                        <div class="form-check checkbox">
+                            <input class="form-check-input" type="checkbox" value="" id="Colorado">
+                            <label class="form-check-label" for="Colorado"> Fox and Jane Salon <strong>(Colorado Springs)</strong> </label>
                         </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="bowery">
-                            <label class="form-check-label" for="bowery"> Fox and Jane Salon <strong>(Denver)</strong> </label>
+                        <div class="form-check checkbox">
+                            <input class="form-check-input" type="checkbox" value="" id="Denver">
+                            <label class="form-check-label" for="Denver"> Fox and Jane Salon <strong>(Denver)</strong> </label>
                         </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="bowery">
-                            <label class="form-check-label" for="bowery"> Fox and Jane Salon <strong>(Easy Village)</strong> </label>
+                        <div class="form-check checkbox">
+                            <input class="form-check-input" type="checkbox" value="" id="Easy">
+                            <label class="form-check-label" for="Easy"> Fox and Jane Salon <strong>(Easy Village)</strong> </label>
                         </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="bowery">
-                            <label class="form-check-label" for="bowery"> Fox and Jane Salon <strong>(Little Lion)</strong> </label>
+                        <div class="form-check checkbox">
+                            <input class="form-check-input" type="checkbox" value="" id="Little">
+                            <label class="form-check-label" for="Little"> Fox and Jane Salon <strong>(Little Lion)</strong> </label>
                         </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="bowery">
-                            <label class="form-check-label" for="bowery"> Fox and Jane Salon <strong>(Lower Easy Side)</strong> </label>
+                        <div class="form-check checkbox">
+                            <input class="form-check-input" type="checkbox" value="" id="Lower">
+                            <label class="form-check-label" for="Lower"> Fox and Jane Salon <strong>(Lower Easy Side)</strong> </label>
                         </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="bowery">
-                            <label class="form-check-label" for="bowery"> Fox and Jane Salon <strong>(San Diego)</strong> </label>
+                        <div class="form-check checkbox">
+                            <input class="form-check-input" type="checkbox" value="" id="San">
+                            <label class="form-check-label" for="San"> Fox and Jane Salon <strong>(San Diego)</strong> </label>
                         </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="bowery">
-                            <label class="form-check-label" for="bowery"> Fox and Jane Salon <strong>(Somerville)</strong> </label>
+                        <div class="form-check checkbox">
+                            <input class="form-check-input" type="checkbox" value="" id="Somerville">
+                            <label class="form-check-label" for="Somerville"> Fox and Jane Salon <strong>(Somerville)</strong> </label>
                         </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="bowery">
-                            <label class="form-check-label" for="bowery"> Fox and Jane Salon <strong>(Toronto)</strong> </label>
+                        <div class="form-check checkbox">
+                            <input class="form-check-input" type="checkbox" value="" id="Toronto">
+                            <label class="form-check-label" for="Toronto"> Fox and Jane Salon <strong>(Toronto)</strong> </label>
                         </div>
                     </div>
                   </form>
@@ -327,6 +373,187 @@
           </div>
         </div>
       </div>
+
+
+        <div class="modal modalWrap slidePanel fade" id="inSalon" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">          
+          <div class="panel-dialog modal-dialog modal-dialog-scrollable panel-lg">            
+            <div class="panel-content modal-content">
+                <div class="close-panel text-align-center align-middle">
+                    <button class="btn btn-simple p-0 white" data-bs-dismiss="modal" aria-label="Close">
+                        <div class="fal fa-times"></div> Close
+                    </button>                            
+                </div>                  
+                <div class="panel-header">
+                    <h5 class="panel-title pb-0">In Salon Consulation</h5>
+                    <div class="tabOptions  panelTabs">
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                              <a class="nav-link active" id="home-tab" data-bs-toggle="tab" href="#overview" role="tab" aria-controls="home" aria-selected="true">Overview</a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                              <a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#options" role="tab" aria-controls="profile" aria-selected="false">Options</a>
+                            </li>                            
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal-body panelBody">                    
+                    <div class="tab-content tabContent" id="myTabContent">
+                        <div class="tab-pane fade show active" id="overview" role="tabpanel" aria-labelledby="home-tab">
+                            <div class="row mt-5">
+                                <div class="col-6 descr">                                    
+                                    <div class="form-group col-12 mb-5">
+                                        <label for="" class="form-label label">Name<span>*</span></label>
+                                        <input type="text" class="form-control" name="service-name" placeholder="Ex. Hair Cut" value="In Salon Consultation"   />
+                                    </div>
+                                    <div class="form-group col-12 mb-5">
+                                        <label for="" class="form-label label">Category<span>*</span></label>
+                                        <select class="mdb-select md-form form-select">                            
+                                            <option value="1">Option 1</option>
+                                            <option value="2">Option 2</option>
+                                            <option value="3">Option 3</option>
+                                            <option value="1">Option 4</option>
+                                            <option value="2">Option 5</option>
+                                            <option value="3">Option 6</option>
+                                            <option value="1">Option 7</option>
+                                            <option value="2">Option 8</option>
+                                            <option value="3">Option 9</option>
+                                            <option value="1">Option 10</option>
+                                            <option value="2">Option 11</option>
+                                            <option value="3">Option 12</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-12 mb-3">
+                                        <label for="" class="form-label label">Description<span>*</span></label>
+                                        <textarea class="form-control" rows="5" cols="0"></textarea>
+                                    </div>
+                                    <div class="form-check col-12 form-switch">
+                                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                        <label class="form-check-label small" for="flexSwitchCheckDefault">
+                                            <strong>Default switch checkbox input</strong> (recommended) <br>Checking this box allows clients to book other services during the processing time of this service.                                                 
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-5 pric">
+                                    <div class="row">                                        
+                                        <div class="form-group col-lg-6 col-sm-12 mb-5">
+                                            <label for="" class="form-label label">Default Price<span>*</span></label>                                            
+                                            <input type="text" class="form-control" name="" value=""   />
+                                        </div>                                        
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-lg-6 col-sm-12 mb-5">
+                                            <label for="" class="form-label label">Duration<span>*</span></label>                                            
+                                            <input type="text" class="form-control" name="" value=""   />
+                                        </div> 
+                                        <div class="form-group col-lg-6 col-sm-12 mb-5">
+                                            <label for="" class="form-label label">Processing Time<span>*</span></label>                                            
+                                            <input type="text" class="form-control" name="" value=""   />
+                                        </div>
+                                        <div class="form-group col-lg-6 col-sm-12 mb-3">
+                                            <label for="" class="form-label label">Finishing Time<span>*</span></label>                                            
+                                            <input type="text" class="form-control" name="" value=""   />
+                                        </div> 
+                                        <div class="form-group col-lg-6 col-sm-12 mb-3">
+                                            <label for="" class="form-label label">Transition Time<span>*</span></label>                                            
+                                            <input type="text" class="form-control" name="" value=""   />
+                                        </div>
+                                        <div class="col-10 detailDesr">
+                                            <p><small>Durations and prices set at the business may be overridden at each location, for each staff role, or for each staff member individually.</small></p>
+                                            <p><small><strong>Processing Time :</strong>A block of time at the end of the service when a client is busy, but the staff can attend other clients. Generally used for hair color processing.</small> </p>
+                                            <p><small><strong>Finishing Time :</strong>A block of time at the end of a service and any processing or transition time when both the client and the staff are busy.</small></p>
+                                            <p><small><strong>Transition Time :</strong> A block of time after the service is performed during which the staff member is unavailable. Use this for cleanup, buffer, documentation time, break time, etc.</small> </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel advLocaSetting mt-5">
+                                <div class="row g-0">
+                                    <table class="panelTable table">
+                                        <thead>
+                                            <tr>
+                                                <th>Advanced Location Settings</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr><td><a href="javascript:void(0);">Fox and Jane Salon (Somerville)</a></td></tr>
+                                            <tr><td><a href="javascript:void(0);">Fox and Jane Salon (Denver)</a></td></tr>
+                                            <tr><td><a href="javascript:void(0);">Fox and Jane Salon (Toronto)</a></td></tr>
+                                            <tr><td><a href="javascript:void(0);">Little Lion Salon (Little Lion)</a></td></tr>
+                                            <tr><td><a href="javascript:void(0);">Fox and Jane Salon (Brooklyn)</a></td></tr>
+                                            <tr><td><a href="javascript:void(0);">Skin-Habit (San Diego)</a></td></tr>
+                                            <tr><td><a href="javascript:void(0);">Fox and Jane Salon (Colorado Springs)</a></td></tr>
+                                            <tr><td><a href="javascript:void(0);">Fox and Jane Salon (Bowery)</a></td></tr>
+                                            <tr><td><a href="javascript:void(0);">Fox and Jane Salon (East Village)</a></td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>                                                        
+                        </div>
+                        <div class="tab-pane fade" id="options" role="tabpanel" aria-labelledby="home-tab">
+                            <div class="row mt-5">
+                                <div class="col-sm-5 panel">
+                                    <h5>Service Add-ons</h5>
+                                    <p><small>Add-ons are unique options meant to enhance or customize a service. Groups are used to organize add-ons during booking and checkout.</small></p>
+                                    <button class="btn btn-primary purple">Create New Group</button>
+                                </div>
+                            </div>
+                            <div class="row mt-5 proUsage">
+                                <div class="col-sm-5 panel">
+                                    <h5>Product Usage</h5>
+                                    <p><small>Add a product required by this service, and optionally adjust the price.</small></p> 
+                                    <div class="form-group mt-5">
+                                        <label for="" class="form-label label">Product Name<span>*</span></label>                                            
+                                        <input type="text" class="form-control" name="" placeholder="Search by product name, SKU, or barcode"   />
+                                    </div>                                   
+                                </div>
+                            </div>
+                        </div>                                              
+                    </div>                      
+                </div>
+                <div class="panel-footer panel">
+                    <div class="row">
+                        <div class="col">
+                            <button class="btn btn-danger">Deactivate</button>
+                            <button class="btn btn-default ms-2">Duplicate</button>
+                        </div>                  
+                        <div class="col text-end">
+                            <button class="btn btn-primary">Save Changes</button>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>          
+        </div>
+        <div class="modal modalWrap slidePanel fade" id="catTitle" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">          
+            <div class="panel-dialog modal-dialog small-dialog modal-dialog-scrollable panel-lg">              
+                <div class="panel-content modal-content">
+                    <div class="close-panel text-align-center align-middle">
+                        <button class="btn btn-simple p-0 white" data-bs-dismiss="modal" aria-label="Close">
+                            <div class="fal fa-times"></div> Close
+                        </button>                            
+                    </div>                  
+                    <div class="panel-header">
+                        <h5 class="panel-title mb-0">Edit Service Category</h5>                      
+                    </div>
+                    <div class="modal-body panelBody">
+                        <form action="">
+                            <div class="form-group mt-5 mb-5">
+                                <label for="" class="form-label label">Category Name<span>*</span></label>                                            
+                                <input type="text" class="form-control" name="" value="CONSULTATION"   />
+                            </div> 
+                        </form>                                           
+                    </div>                  
+                    <div class="panel-footer panel">
+                        <div class="row">
+                            <div class="col text-end">
+                                <button class="btn btn-danger">Deactivate</button>
+                                <button class="btn btn-primary ms-2">Save</button>
+                            </div>                                          
+                        </div>
+                    </div>
+                </div>                
+            </div>          
+        </div>
     
   
     

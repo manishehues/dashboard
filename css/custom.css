@@ -7,7 +7,7 @@
     --white: #ffffff;
     --soft-purple: #eaedf9;
     --light-green: #7cb342;
-    --red: #ff4040;
+    --red: #dc3545;
     --soft-green:#e4f9d3;    
     --dark-green:#2a836c;   
     --light-grey:#eeeeee; 
@@ -31,14 +31,24 @@
 .inactive{color:var(--red)}
 
 
-input:focus{
-    box-shadow:none!important;
+input:focus{    
     border:none!important;
     outline:none
 }
 
 small{
-    font-size:12px;
+    font-size:13px;
+    color:var(--dark-grey);
+    opacity: 0.8;
+    line-height:1.3em;
+}
+
+h1, h2, h3, h4, h5, h6{
+    color:var(--dark-grey);
+}
+
+h5{
+    font-size:20px;
 }
 
 a:hover,
@@ -64,6 +74,7 @@ a{
     font-size:14px;
     font-weight:500;
     padding:10px 20px;
+    cursor: pointer;
 }
 .btn.btn-sm{
     padding:6px 12px;
@@ -88,7 +99,7 @@ a{
 }
 
 .btn.btn-default{
-    background:#fff;  
+    background:var(--light-grey);  
     box-shadow:0px 0px 3px rgba(0,0,0,0.08);      
     color:var(--grey);
 }
@@ -102,6 +113,14 @@ a{
     border-radius:4px;
 }
 
+.btn.btn-simple{
+    color:var(--dark-grey);
+}
+
+.btn.btn-simple.white{
+    color:var(--white);
+}
+
 body{
     font-family:'Roboto', sans-serif;
 }
@@ -113,6 +132,7 @@ img{
 .form-control::placeholder{
     opacity: 0.2;
 }
+
 
 .tooltip-inner{
     font-size:10px;
@@ -284,17 +304,30 @@ img{
     color:var(--dark-grey);
 }
 
-.form-check .form-check-input{
+.form-check label.form-check-label.small{
+    font-size:12px;
+    color:var(--dark-grey);
+    opacity: 0.8;
+}
+.form-check label.form-check-label.small{
+    font-weight:300;
+}
+
+.form-check label.form-check-label.small strong{
+    font-weight:500;
+}
+
+.form-check.checkbox .form-check-input{
     border-color:var(--light-purple);
     background:var(--soft-purple);
     border-radius:2px;
 }
-.form-check .form-check-input:focus{
+.form-check.checkbox .form-check-input:focus{
     border:1px solid var(--purple)!important;
     background:var(--soft-purple);
 }
 
-.form-check .form-check-input:checked{
+.form-check.checkbox .form-check-input:checked{
     border-radius:2px;
     border-color:var(--purple);
     background:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/%3e%3c/svg%3e") var(--purple);
@@ -311,10 +344,23 @@ img{
     font-weight:700;
     color:var(--dark-grey);
 }
-.form-group .form-control:focus,
-.form-group .form-control:focus-visible,
+
+.form-group textarea.form-control{
+    height:auto;
+    font-size:14px;
+    font-weight:normal;
+    resize:none;
+    max-height:250px;
+    padding:5px 0;
+    color:var(--dark-grey)
+}
 .form-group .form-control:hover{
     box-shadow:none
+}
+.form-control:focus,
+.form-control:focus-visible{
+    border-color:var(--purple)!important;
+    box-shadow:none;
 }
 
 .form-group h5{
@@ -330,9 +376,12 @@ img{
     line-height: normal;
     top: -10px;    
     color:var(--dark-grey);
-    opacity: 0.5;
-    left:10px;
+    opacity: 0.5;    
     z-index: 9;
+}
+
+.form-group label span{
+    color:var(--red)
 }
 
 .form-select{
@@ -349,9 +398,6 @@ img{
 }
 .form-select input[type="text"]{
     background:none;
-    font-weight:normal;
-    font-size:14px;
-    color:var(--light-text-grey);
     cursor: pointer;
 }
 .form-select span.caret{
@@ -379,6 +425,20 @@ img{
     color:var(--dark-grey)
 }
 
+.form-check.form-switch input.form-check-input{
+    border-radius:50px;
+    width:36px;
+    height:18px;
+    margin-right:10px;
+    cursor: pointer;
+}
+
+.form-check.form-switch input:checked{
+    background:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e") no-repeat var(--purple);
+    background-position: right center;
+    border-color: var(--purple);
+}
+
 
 /*==========Modal==========*/
 
@@ -395,9 +455,16 @@ img{
 }
 
 .modalWrap .modal-lg .modalBody{
-    padding:70px
+    padding:30px 70px
 }
 
+.modal-header,
+.modal-footer{
+    border:none;
+    box-shadow:0px 0px 10px rgba(0,0,0,0.15);
+    position: relative;
+    z-index: 99;    
+}
 
 /* ==========Panel Area========== */
 
@@ -441,6 +508,7 @@ img{
     background:var(--light-grey);
     font-weight:500;
     color:var(--light-text-grey);
+    cursor:pointer;
 }
 .panelTable tbody tr{
     cursor:pointer;
@@ -471,6 +539,131 @@ img{
 .panelTable tbody tr:hover{
     background:var(--dim-purple);
 }
+
+
+/* =============Slide Panel=========== */
+
+.slidePanel .panel-dialog{
+    position: fixed;
+    right:0;    
+    background:var(--white);
+    height:100vh;    
+    margin:0;
+    max-width:none;
+    max-width:1280px;
+    pointer-events: initial;
+    width:calc(100% - 230px);
+}
+
+.slidePanel .panel-dialog.small-dialog{
+    max-width:400px
+}
+
+.panelTopPart{
+    position: fixed;
+    width:100%;
+    left:0;
+    top:0;
+}
+
+.slidePanel .panel-dialog{
+    display: flex;    
+}
+
+.slidePanel .close-panel{
+    min-height:55px;
+    background:var(--dark-grey);
+    display:flex;
+    align-items: center;
+    padding-left:24px;
+    padding-right:24px;  
+}
+.slidePanel .close-panel .btn{    
+    font-weight:300;
+}
+
+.slidePanel.fade .panel-dialog{
+    transform: translate(100%, 0);
+}
+.slidePanel.show .panel-dialog{
+    transform: none;
+}
+.slidePanel .panel-title{
+    font-size:18px;
+    color:var(--dark-grey);
+    padding: 20px 24px;    
+}
+
+.slidePanel .panelBody{
+    padding:0 24px;
+}
+
+.slidePanel .panel-content{
+    display: flex;
+    flex-direction: column;
+}
+.slidePanel .panel-content.modal-content{
+    border:none;
+    border-radius:0;
+    flex: 1 1 auto;
+}
+.slidePanel .panel-header{
+    /* border-bottom:1px solid var(--light-grey); */
+    box-shadow:0px 0px 5px rgba(0,0,0,0.15);
+    position: relative;
+    z-index: 99;
+}
+.slidePanel .panel-footer{    
+    box-shadow:0px 0px 5px rgba(0,0,0,0.15);
+    position: relative;
+    z-index: 99;
+    padding:20px 24px;
+    position: relative;
+    z-index: 99;    
+    background-color: var(--white);
+}
+
+.panelTabs .nav-tabs{
+    border:none;
+    margin-top:15px;
+}
+.panelTabs .nav-item .nav-link{
+    border-radius:0;
+    box-shadow:none;
+    border:none;
+    background:none;
+    padding:10px 24px;
+    font-size:14px;
+    color:var(--grey);
+}
+.panelTabs .nav-item .nav-link.active{
+    color:var(--purple);
+    box-shadow: inset 0px -3px 0px 0px var(--purple);    
+}
+.slidePanel .panelTable{
+    box-shadow:none;
+    border-radius:0;
+}
+
+.slidePanel .panelTable thead th{
+    font-size:16px;
+    color:var(--dark-grey);
+    font-weight:700;
+    padding:14px 24px
+}
+.slidePanel .panelTable tbody td{
+    font-weight:400;
+    font-size:14px;
+    padding:12px 24px
+
+}
+.slidePanel .panelTable tbody td a{
+    color:var(--grey)
+}
+.slidePanel .panelTable tbody td:hover a{
+    color:var(--purple)
+}
+
 /*============avatar===========*/
 .allboard .board .cardsWrap{
     display: block;
@@ -1138,7 +1331,7 @@ img{
     padding-left:30px;
     padding-right:30px;
     height:55px;
-    background: var(--soft-purple);
+    background: var(--white);
     display:flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -1351,7 +1544,7 @@ img{
 .statusBar .cliSearch .form-control{
     height:55px;
     width:400px;
-    background:#fff;
+    background:var(--soft-purple);
     display:block;
     border-radius:0;
     border:none;
@@ -1498,4 +1691,9 @@ body.settingsPage{
 }
 .staDroMenu .btn-simple i{
     font-size:10px;;
+}
+
+#inSalon .advLocaSetting{
+    margin-left:-24px;
+    margin-right:-24px;
 }
