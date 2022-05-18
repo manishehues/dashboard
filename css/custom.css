@@ -55,7 +55,9 @@ h5 small,
 h6 small{
     color:var(--light-text-grey);
     display:block;
-    font-weight:normal
+    font-weight:normal;
+    margin-top:3px;
+    line-height:1.4em;
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -64,6 +66,9 @@ h1, h2, h3, h4, h5, h6{
 
 h5{
     font-size:20px;
+}
+h6{
+    font-size:15px;
 }
 
 a:hover,
@@ -314,9 +319,20 @@ img{
     margin-bottom:15px;
 }
 
+.form-check-input:focus{
+    box-shadow:0 0 0 .25rem rgba(127,67,253,.25)
+}
+
 .form-check label.form-check-label{
     font-size:15px;
     color:var(--dark-grey);
+}
+
+.form-check label.form-check-label
+
+.form-check label.form-check-label strong{
+    font-weight:500;
+    display:block;
 }
 
 .form-check label.form-check-label.small{
@@ -349,16 +365,43 @@ img{
 }
 
 
+.form-check.radio .form-check-input{
+    border-color:var(--light-purple);
+    background:var(--soft-purple);
+    border-radius:100%;
+    width:1.5em;
+    height:1.5em;
+    border-width:2px;
+    margin-right:8px;
+    position: relative;
+    top:-3px;
+    cursor: pointer;
+}
+.form-check.radio .form-check-input:focus{
+    border:1px solid var(--purple)!important;
+    background:var(--soft-purple);
+}
+
+.form-check.radio .form-check-input:checked{
+    border-color:var(--purple)
+}
+.form-check.radio .form-check-input:checked[type="radio"]{
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%237c43fd'/%3e%3c/svg%3e");
+}
+
+
+
 .form-group .form-control{
     height:40px;
     border:none;
-    border-bottom:1px solid var(--light-grey)!important;
+    border-bottom:none!important;
     border-radius:0;
     padding:0;
     box-shadow:none;
     font-size:17px;
     font-weight:400;
     color:var(--dark-grey);
+    box-shadow: inset 0px -1px 0px 0px var(--light-grey);
 }
 
 .form-group textarea.form-control{
@@ -370,13 +413,10 @@ img{
     padding:5px 0;
     color:var(--dark-grey)
 }
-.form-group .form-control:hover{
-    box-shadow:none
-}
 .form-control:focus,
 .form-control:focus-visible{
     border-color:var(--purple)!important;
-    box-shadow:none;
+    box-shadow: inset 0px -2px 0px 0px var(--purple);
 }
 
 .form-group h5{
@@ -493,7 +533,7 @@ img{
 }
 
 .shadow{
-    box-shadow:0 1px 3px 0 rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 2px 1px -1px rgb(0 0 0 / 12%)!important;
+    /* box-shadow:0 1px 3px 0 rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 2px 1px -1px rgb(0 0 0 / 12%)!important; */
     background:var(--white);
 }
 
@@ -1734,5 +1774,8 @@ body.settingsPage{
 }
 .busiDetails img{
     max-width:100%;
+    border-radius:100%;
 }
-.busiDetails .businessInfo
+.busiDetails .businessInfo{
+
+}

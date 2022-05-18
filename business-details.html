@@ -107,7 +107,7 @@
                                 <div class="col-lg-3 left">                                    
                                     <div class="busiessLogo">
                                         <img src="images/logo-medium.png" alt="Fox & Jane Salon">
-                                        <div class="col-12 mt-3 d-grid">
+                                        <div class="col-12 mt-3 text-center">
                                             <button class="btn btn-primary purple"> <i class="fas fa-upload"></i> Business Logo</button>
                                         </div>
                                     </div>
@@ -167,25 +167,81 @@
                             </div>                                                        
                         </div>                                               
                     </div>
-                    <div class="panel busiContact justify-content-between shadow row g-0">
+                    <div class="panel busiContact justify-content-between shadow row g-0 mb-4">
                         <div class="col-lg-3 secLabel">
                             <h5 class="text-secondary m-0">Billing Contact <small>You can update your preferred contact for your Boulevard membership at any time.</small></h5>
                         </div>
                         <div class="col-lg-8 pt-2 secDetail">
                             <div class="row g-0">
-                                <div class="col-lg-3 left">
-                                    <div class="busiessLogo">
-                                        <img src="images/logo-medium.png" alt="Fox & Jane Salon">
+                                <div class="col-lg-4 left billingContact">
+                                    <h6>Billing Contact <small>All billing-related emails will be sent to this email.</small></h6>
+                                </div>
+                                <div class="col-lg-6 right  ps-3 billingEmail">
+                                    <div class="row g-0">
+                                        <div class="form-group col-12 mb-4">                                            
+                                            <input type="text" class="form-control" name="" value="billing@foxandjanesalon.com"   />
+                                        </div> 
                                     </div>
                                 </div>
-                                <div class="col-lg-7 right pt-3 ps-3 businessInfo">
+                            </div>                                                        
+                        </div>                                               
+                    </div>
+                    <div class="panel busiContact justify-content-between shadow row g-0 mb-4">
+                        <div class="col-lg-3 secLabel">
+                            <h5 class="text-secondary m-0">Employee Settings <small>Allow additional details to display for employees at your business.</small></h5>
+                        </div>
+                        <div class="col-lg-8 pt-2 secDetail">
+                            <div class="row g-0">
+                                <div class="col-lg-4 left billingContact pe-4">
+                                    <h6>Staff Display Name <small>Select how you want your employee names to be displayed in dashboard and for online booking.</small></h6>
+                                </div>
+                                <div class="col-lg-6 right ps-3 billingEmail">
                                     <div class="row g-0">
-
+                                        <div class="form-group col-7 mb-4">                                            
+                                            <select class="mdb-select md-form form-select">                            
+                                                <option value="1" selected>First and Last Name</option>
+                                                <option value="2">First and Last Initial</option>
+                                                <option value="3">First Name</option>                                                
+                                            </select>
+                                        </div> 
                                     </div>
                                 </div>
                             </div>                                                        
                         </div>                                               
                     </div>                    
+                    <div class="panel cancellationFee justify-content-between shadow row g-0 mb-4">
+                        <div class="col-lg-3 secLabel">
+                            <h5 class="text-secondary m-0">Cancellation Fee <small>Customize a fee for any appointments cancelled after the cancellation period.</small></h5>
+                        </div>
+                        <div class="col-lg-8 pt-2 secDetail">
+                            <div class="row g-0">
+                                <div class="col-lg-4 canFee pe-4">
+                                    <h6>Cancellation Fee <small>Set a cancellation fee either by percentage or dollar amount.</small></h6>
+                                </div>
+                                <div class="col-lg-6 right ps-3 setPercentage">
+                                    <div class="row g-0">
+                                        <div class="form-check radio col-12 mb-4">                                            
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                            <label class="form-check-label" for="flexRadioDefault1">
+                                                <strong>Set as percentage</strong>
+                                                <small>This fee applies to the cost of scheduled service(s) only.</small>
+                                            </label>
+                                        </div>
+                                        <div class="form-group col-4 ms-5 mb-5">
+                                            <label for="" class="form-label label">Cancellation fee<span>*</span></label>                                             
+                                            <input type="text" class="form-control" name="" value="50.00%"   />
+                                        </div>
+                                        <div class="form-check radio col-12 mb-4">                                            
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                            <label class="form-check-label" for="flexRadioDefault2">
+                                                <strong>Set as dollar amount</strong>                                                
+                                            </label>
+                                        </div>                                         
+                                    </div>
+                                </div>
+                            </div>                                                        
+                        </div>                                               
+                    </div>
                 </div>
             </div>
         </div>
