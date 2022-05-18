@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <!-- Stylesheet -->    
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="css/mdb.min.css.css" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">        
+    <link rel="stylesheet" href="css/custom.css" type="text/css" />    
+
+    
+</head>
+<body class="dahsboard settingsPage" style="background: rgba(0, 0, 0, 0) linear-gradient(to right, rgb(48, 213, 200), rgb(255, 255, 0)) repeat scroll 0% 0%;">
+    <header id="site-header" class="siteHeader container-fluid">
+        <div class="leftSide logoNavbar">
+            <div class="SiteLogo">
+                <a href="index.html" class="customLink">
+                    <div class="logoImg">
+                        <img src="images/proLogo.png" alt="Fox and Jane Salon">
+                    </div>
+                    <div class="proName">
+                        Fox and Jane Salon <small class="loc">Bowery</small>                            
+                    </div>
+                </a>
+            </div>
+            <div class="mainSearch">
+                <div class="searchIcon">
+                    <label for="clientSearch">
+                        <i class="fas fa-search" data-bs-toggle="collapse" href="#mainSearch" role="button" aria-expanded="false" ></i>
+                    </label>
+                </div>
+                <div class="searchField collapse" id="mainSearch">
+                    <input id="clientSearch" type="search" placeholder="Search Clients">
+                </div>                
+            </div>
+            <div class="navBar">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" aria-current="page" href="index.html">Front Desk</a></li>
+                    <li class="nav-item"><a class="nav-link" href="calender.html">Calendar</a></li>
+                    <li class="nav-item"><a class="nav-link" href="clients.html">Clients</a></li>                    
+                    <li class="nav-item"><a class="nav-link" href="sales.html">Sales</a></li>                    
+                    <li class="nav-item"><a class="nav-link" href="reports.html">Reports</a></li>                    
+                    <li class="nav-item"><a class="nav-link" href="business-details.html">Manage</a></li>                    
+                </ul>                
+            </div>
+        </div>            
+        <div class="rightSide accNotiSettings">
+            <div class="allSettings">
+                <div class="sngSetting allNoti">                    
+                    <a href="javascripr:void(0);" class="fal fa-bell"><span class="notCount">25</span></a>                    
+                </div>
+                <div class="sngSetting setting">                    
+                    <a href="settings.html" class="fal fa-cog"></a>
+                </div>
+                <div class="sngSetting myAcc">                    
+                    <a href="javascripr:void(0);" class="fal fa-user-circle"></a>
+                </div>
+            </div>              
+        </div>        
+    </header>
+    <!-- Wrapper -->
+    <div id="settings" class="mainWrapper">
+        <!-- Status Bar -->
+        <div id="settingsBar" class="statusBar settingsBar container-fluid">            
+            <div class="leftSide pageTitle">
+                <h4 class="barTitle">Manage Business</h4>
+            </div>                       
+        </div>
+        <!--End of Status Bar -->
+        <div id="setPanelWrap" class="setWrap panelWrap bodyWrap p-0 container-fluid">
+            <div class="row m-0 g-0 justify-content-end">
+                <div id="left" class="serMenu leftSide sideBarMenu p-0 col">
+                    <ul class="sideMenu">                    
+                        <li class="menuItem"><a href="apps-integrations.html">Apps & Integrations</a></li>
+                        <li class="menuItem"><a href="billings.html">Billing</a></li>
+                        <li class="menuItem active"><a href="business-details.html">Business Details</a></li>
+                        <li class="menuItem"><a href="discount-reasons.html">Discount Reasons</a></li>
+                        <li class="menuItem"><a href="gift-cards.html">Gift Cards</a></li>
+                        <li class="menuItem"><a href="emplaoyee.html">Employees</a></li>
+                        <li class="menuItem"><a href="forms.html">Forms</a></li>
+                        <li class="menuItem"><a href=";ocations.html.html">Locations</a></li>
+                        <li class="menuItem"><a href="memberships.html">Memberships</a></li>
+                        <li class="menuItem"><a href="offers.html">Offers</a></li>
+                        <li class="menuItem"><a href="online-booking.html">Online Booking</a></li>
+                        <li class="menuItem"><a href="payments-processing.html">Payment Processing</a></li>
+                        <li class="menuItem"><a href="privilege-groups.html">Privilege Groups</a></li>
+                        <li class="menuItem"><a href="product-categories.html">Product Categories</a></li>
+                        <li class="menuItem"><a href="products.html">Products</a></li>
+                        <li class="menuItem"><a href="resources.html">Referral Sources</a></li>
+                        <li class="menuItem"><a href="resources-categories.html">Resource Categories</a></li>
+                        <li class="menuItem"><a href="services.html">Services</a></li>
+                        <li class="menuItem"><a href="staff-roles.html">Staff Roles</a></li>
+                        <li class="menuItem"><a href="suppliers.html">Suppliers</a></li>
+                        <li class="menuItem"><a href="tags.html">Tags</a></li>
+                    </ul>
+                </div>
+                <div id="right" class="rightSide col panel busiDetails setBodyDetails">
+                    <div class="panel busiInfo justify-content-between shadow row g-0 mb-4">
+                        <div class="col-lg-3 secLabel pe-5">
+                            <h5 class="text-secondary m-0">Business Info <small>Details about your overall business and headquarters.</small></h5>
+                        </div>
+                        <div class="col-lg-8 pt-2 secDetail">
+                            <div class="row g-0">
+                                <div class="col-lg-3 left">                                    
+                                    <div class="busiessLogo">
+                                        <img src="images/logo-medium.png" alt="Fox & Jane Salon">
+                                        <div class="col-12 mt-3 d-grid">
+                                            <button class="btn btn-primary purple"> <i class="fas fa-upload"></i> Business Logo</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-7 right pt-3 ps-3 businessInfo">
+                                    <div class="row g-0">
+                                        <div class="form-group col-12 mb-5">
+                                            <label for="" class="form-label label">Business Name<span>*</span></label>                                            
+                                            <input type="text" class="form-control" name="" value="Fox and Jane Salon"   />
+                                        </div>                                        
+                                        <div class="form-group col-12 mb-5">
+                                            <label for="" class="form-label label">Business URL<span>*</span></label>                                            
+                                            <input type="text" class="form-control" name="" value="https://blvd.me/fox-and-jane-salon"   />
+                                        </div>
+                                        <div class="form-group col-12 mb-5">
+                                            <label for="" class="form-label label">Headquarters Address<span>*</span></label>                                            
+                                            <input type="text" class="form-control mb-5" name="" value="223 Grand St"   />
+                                            <input type="text" class="form-control mb-5" name="" value="Floor 2"   />
+                                            <div class="row g-0">
+                                                <div class="form-group col mb-0 pe-3">
+                                                    <label for="" class="form-label label">City<span>*</span></label>                                            
+                                                    <input type="text" class="form-control" name="" value="New York"   />                                                    
+                                                </div>
+                                                <div class="form-group col mb-0 pe-3">
+                                                    <label for="" class="form-label label">State/Province<span>*</span></label>
+                                                    <select class="mdb-select md-form form-select">                            
+                                                        <option value="1">Option 1</option>
+                                                        <option value="2">Option 2</option>
+                                                        <option value="3">Option 3</option>
+                                                        <option value="1">Option 4</option>
+                                                        <option value="2">Option 5</option>
+                                                        <option value="3">Option 6</option>
+                                                        <option value="1">Option 7</option>
+                                                        <option value="2">Option 8</option>
+                                                        <option value="3">Option 9</option>
+                                                        <option value="1">Option 10</option>
+                                                        <option value="2">Option 11</option>
+                                                        <option value="3">Option 12</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group col mb-0">
+                                                    <label for="" class="form-label label">Postal Code<span>*</span></label>
+                                                    <input type="text" class="form-control" name="" value="10013"   />                                                    
+                                                </div>
+                                            </div>  
+                                        </div>
+                                        <div class="form-group col-12 mb-5">
+                                            <label for="" class="form-label label">Phone<span>*</span></label>                                            
+                                            <input type="tel" class="form-control" name="" value="(212) 837-2774"   />
+                                        </div>
+                                        <div class="form-group col-12">
+                                            <label for="" class="form-label label">Website<span>*</span></label>                                            
+                                            <input type="text" class="form-control" name="" value="https://foxandjanesalon.com/bowery/"   />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                                                        
+                        </div>                                               
+                    </div>
+                    <div class="panel busiContact justify-content-between shadow row g-0">
+                        <div class="col-lg-3 secLabel">
+                            <h5 class="text-secondary m-0">Billing Contact <small>You can update your preferred contact for your Boulevard membership at any time.</small></h5>
+                        </div>
+                        <div class="col-lg-8 pt-2 secDetail">
+                            <div class="row g-0">
+                                <div class="col-lg-3 left">
+                                    <div class="busiessLogo">
+                                        <img src="images/logo-medium.png" alt="Fox & Jane Salon">
+                                    </div>
+                                </div>
+                                <div class="col-lg-7 right pt-3 ps-3 businessInfo">
+                                    <div class="row g-0">
+
+                                    </div>
+                                </div>
+                            </div>                                                        
+                        </div>                                               
+                    </div>                    
+                </div>
+            </div>
+        </div>
+    </div>    
+    
+  
+    
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script> 
+    <script src="js/mdb.min.js"></script> 
+    <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js"></script>    
+    <script>
+        $('#datepicker').datepicker({
+            uiLibrary: 'bootstrap4',
+            format: 'ddd, dd mmm yyyy'
+        });
+        $(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip();           
+        });
+        $(document).ready(function() {
+                $('.mdb-select').materialSelect();
+            });
+        
+        $(document).on('click', function (e){
+            /* bootstrap collapse js adds "in" class to your collapsible element*/
+            var menu_opened = $('#staffFullList').hasClass('show');
+        
+            if(!$(e.target).closest('#staffFullList').length &&
+                !$(e.target).is('#staffFullList') &&
+                menu_opened === true){
+                    $('#staffFullList').collapse('toggle');
+            }
+        });
+        $(document).on('click', function (e){
+            /* bootstrap collapse js adds "in" class to your collapsible element*/
+            var menu_opened = $('#allTags').hasClass('show');
+        
+            if(!$(e.target).closest('#allTags').length &&
+                !$(e.target).is('#allTags') &&
+                menu_opened === true){
+                    $('#allTags').collapse('toggle');
+            }
+        });
+        $(document).on('click', function (e){
+            /* bootstrap collapse js adds "in" class to your collapsible element*/
+            var menu_opened = $('#mainSearch').hasClass('show');
+        
+            if(!$(e.target).closest('#mainSearch').length &&
+                !$(e.target).is('#mainSearch') &&
+                menu_opened === true){
+                    $('#mainSearch').collapse('toggle');
+            }
+        });
+    </script>
+    
+</body>
+</html>

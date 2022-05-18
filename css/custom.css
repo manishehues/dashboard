@@ -11,7 +11,7 @@
     --soft-green:#e4f9d3;    
     --dark-green:#2a836c;   
     --light-grey:#eeeeee; 
-    --light-text-grey:rgba(56, 59, 73, 0.8); 
+    --light-text-grey:rgba(93, 96, 108, 0.8); 
     --soft-grey:#f8f7f7; 
     --warning:#ff6f00;
     --yellow:#e9b63a;
@@ -21,7 +21,7 @@
     --soft-purple:#f6f4ff;
     --dim-purple:#f5f2ff;
     --light-pink:#c560c5;
-
+    --table-td-hover:rgba(124, 67, 253, 0.05);
     /* Transition Speed */
     --aniSpeed: 0.3s;
 }
@@ -30,17 +30,32 @@
 .ilde{color:var(--yellow)}
 .inactive{color:var(--red)}
 
+.text-primary{color:var(--dark-grey)!important}
+.text-secondary{color:var(--purple)!important}
+
 
 input:focus{    
     border:none!important;
     outline:none
 }
 
+
 small{
     font-size:13px;
     color:var(--dark-grey);
     opacity: 0.8;
     line-height:1.3em;
+}
+
+h1 small,
+h2 small,
+h3 small,
+h4 small,
+h5 small,
+h6 small{
+    color:var(--light-text-grey);
+    display:block;
+    font-weight:normal
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -292,7 +307,7 @@ img{
 /* =========Form Group========= */
 .form-group{
     position: relative;
-    margin-bottom:20px;
+    margin-bottom:30px;
 }
 
 .form-check{
@@ -333,15 +348,16 @@ img{
     background:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/%3e%3c/svg%3e") var(--purple);
 }
 
+
 .form-group .form-control{
-    height:55px;
+    height:40px;
     border:none;
-    border-bottom:2px solid var(--light-grey)!important;
+    border-bottom:1px solid var(--light-grey)!important;
     border-radius:0;
     padding:0;
     box-shadow:none;
-    font-size:22px;
-    font-weight:700;
+    font-size:17px;
+    font-weight:400;
     color:var(--dark-grey);
 }
 
@@ -378,6 +394,7 @@ img{
     color:var(--dark-grey);
     opacity: 0.5;    
     z-index: 9;
+    left:0;
 }
 
 .form-group label span{
@@ -475,8 +492,14 @@ img{
     border-top: none;
 }
 
+.shadow{
+    box-shadow:0 1px 3px 0 rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 2px 1px -1px rgb(0 0 0 / 12%)!important;
+    background:var(--white);
+}
+
 .panelWrap .panel{
     padding:30px;
+    border-radius:3px
 }
 
 .panelHead h3{
@@ -495,8 +518,13 @@ img{
 .panelTable{
     background:var(--white);
     border-radius:3px;
-    box-shadow:0 1px 2px 0 rgb(0 0 0 / 10%), 0 2px 1px 0 rgb(0 0 0 / 10%), 0 2px 1px -1px rgb(0 0 0 / 1%);
+    box-shadow:0 1px 2px 0 rgb(0 0 0 / 10%), 0 2px 1px 0 rgb(0 0 0 / 10%), 0 2px 1px -1px rgb(0 0 0 / 1%);    
 }
+
+.fixed-layout{
+    table-layout: fixed;
+}
+
 .panelTable,
 .panelTable thead tr th{
     border:none;
@@ -516,17 +544,14 @@ img{
 .panelTable tbody tr td{
     font-size:13px;        
     padding:10px 15px;
-    color:var(--light-text-grey);
-    font-weight:300;    
-}
-.panelTable tbody tr:hover{
-    background:var(--soft-grey)
+    color:var(--light-text-grey);       
 }
 
 .panelTable tbody tr td a{
     color:var(--light-text-grey);
 }
-.panelTable tbody tr td i{
+.panelTable tbody tr td i,
+.panelTable thead tr th i{
     font-size:12px;        
 }
 .panelTable tbody tr td i.fas{
@@ -536,8 +561,9 @@ img{
     opacity: 1;
 }
 
-.panelTable tbody tr:hover{
-    background:var(--dim-purple);
+.table-hover > tbody > tr:hover > *{
+    --bs-table-accent-bg:var(--table-td-hover);
+    color:var(--dark-grey)
 }
 
 
@@ -592,6 +618,10 @@ img{
     font-size:18px;
     color:var(--dark-grey);
     padding: 20px 24px;    
+}
+
+.slidePanel .close-panel .panel-title{
+    font-size:16px;
 }
 
 .slidePanel .panelBody{
@@ -723,7 +753,7 @@ img{
     text-transform: uppercase;    
     font-weight:700;
     position: relative;   
-    margin-left:-28px; 
+    margin-left:-24px; 
 }
 .snglAvtar .fav{
     font-size: 12px;
@@ -1198,6 +1228,7 @@ img{
     font-weight:normal;
     font-size:11px;
     line-height:normal;
+    color:var(--white);
 }
 .siteHeader .mainSearch{
     float:left;
@@ -1381,7 +1412,7 @@ img{
 }
 .staffFullList .head label{
     color:var(--grey);
-    font-weight:600
+    font-weight:500
 }
 .staffFullList .head .groHeader{
     float:left;
@@ -1392,7 +1423,7 @@ img{
     color:var(--light-pink);
     padding: 5px 10px;
     border-radius: 100px;
-    font-weight:600;
+    font-weight:500;
 } 
 .staffFullList .groHeader .selBtn.selected{
     color:#fff;
@@ -1496,8 +1527,6 @@ img{
 .statusBar .staffList .avtar .snglAvtar span{
     width:35px;
     height:35px;
-    
-    margin-left:-25px;
 }
 .statusBar .staffList .avtar .snglAvtar span i{
     font-size:12px;
@@ -1544,7 +1573,7 @@ img{
 .statusBar .cliSearch .form-control{
     height:55px;
     width:400px;
-    background:var(--soft-purple);
+    background:var(--light-grey);
     display:block;
     border-radius:0;
     border:none;
@@ -1697,3 +1726,13 @@ body.settingsPage{
     margin-left:-24px;
     margin-right:-24px;
 }
+
+
+/* =========Business Details========= */
+.busiDetails .busiessLogo{
+    width:215px;    
+}
+.busiDetails img{
+    max-width:100%;
+}
+.busiDetails .businessInfo
