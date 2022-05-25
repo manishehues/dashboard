@@ -67,7 +67,7 @@ h1, h2, h3, h4, h5, h6{
 }
 
 h5{
-    font-size:20px;
+    font-size:18px;
 }
 h6{
     font-size:15px;
@@ -136,11 +136,20 @@ a{
 }
 
 .btn.btn-simple{
-    color:var(--grey);
+    color:var(--grey);    
 }
 
 .btn.btn-simple.white{
     color:var(--white);
+}
+
+
+.btn.btn-default.white{
+    background:var(--white);
+}
+.btn.btn-default.white:hover{
+    border-color:var(--purple)!important;
+    color:var(--purple)
 }
 
 body{
@@ -313,7 +322,7 @@ img{
 
 /* =========Form Group========= */
 .bigLabel{
-    font-size:18px;    
+    font-size:16px;    
     font-weight:700
 }
 
@@ -335,7 +344,9 @@ img{
     color:var(--dark-grey);
 }
 
-.form-check label.form-check-label{}
+.form-check.form-switch label.form-check-label{
+    cursor: pointer;
+}
 
 .form-check label.form-check-label strong{
     font-weight:500;
@@ -359,17 +370,24 @@ img{
     font-weight:500;
 }
 
-.form-check.checkbox .form-check-input{
+.form-select ul.select-dropdown li input.form-check-input{
+    margin-right:5px;
+}
+
+.form-check.checkbox .form-check-input,
+.form-select ul.select-dropdown li input.form-check-input{
     border-color:var(--light-purple);
     background:var(--soft-purple);
     border-radius:2px;
 }
-.form-check.checkbox .form-check-input:focus{
+.form-check.checkbox .form-check-input:focus,
+.form-select ul.select-dropdown li input.form-check-input:focus{
     border:1px solid var(--purple)!important;
     background:var(--soft-purple);
 }
 
-.form-check.checkbox .form-check-input:checked{
+.form-check.checkbox .form-check-input:checked,
+.form-select ul.select-dropdown li input.form-check-input:checked{
     border-radius:2px;
     border-color:var(--purple);
     background:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/%3e%3c/svg%3e") var(--purple);
@@ -430,10 +448,6 @@ img{
     box-shadow: inset 0px -2px 0px 0px var(--purple);
 }
 
-.form-group h5{
-    font-size:20px;
-    color:var(--dark-grey)
-}
 
 .form-group .label{
     font-size: 12px;    
@@ -479,6 +493,8 @@ img{
     max-height:200px!important;
     overflow-y:scroll ;
     z-index: 99;
+    top:50%!important;
+    transform: translateY(-50%);
 }
 .form-select ul.select-dropdown li{
     display:block;
@@ -499,12 +515,20 @@ img{
     height:18px;
     margin-right:10px;
     cursor: pointer;
+    border:none;
+    box-shadow: 0px 1px 11px rgba(0,0,0,0.25);
+    background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba%280, 0, 0, 0.25%29'/%3e%3c/svg%3e")
 }
-
+.form-check.form-switch input.form-check-input:focus{
+    background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba%280, 0, 0, 0.25%29'/%3e%3c/svg%3e");
+}
 .form-check.form-switch input:checked{
     background:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e") no-repeat var(--purple);
     background-position: right center;
     border-color: var(--purple);
+}
+.form-check.form-switch input.form-check-input:checked:focus{
+    background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
 }
 
 
@@ -596,12 +620,8 @@ img{
 .panelTable tbody tr td{
     font-size:13px;        
     padding:14px 15px;
-    color:var(--light-text-grey);         
-}
-
-.panelTable tbody tr td.firstName{
-    position: relative;
-    padding-left:50px;
+    color:var(--light-text-grey);
+    vertical-align: middle;         
 }
 
 .panelTable tbody tr td.firstName span{
@@ -620,7 +640,9 @@ img{
 }
 .panelTable tbody tr td i,
 .panelTable thead tr th i{
-    font-size:12px;        
+    font-size:10px; 
+    margin-left:5px;    
+    font-weight:bold       
 }
 .panelTable tbody tr td i.fas{
     opacity: 0;
@@ -764,7 +786,8 @@ img{
     font-weight:600;
 }
 .slidePanel .panelTable.table-sm tbody tr td{
-    font-size:13px;    
+    font-size:13px;
+    padding:7px 20px;    
 }
 
 .slidePanel .panelTable tbody tr td.notAssign{
@@ -1731,6 +1754,11 @@ img{
     border-bottom:1px solid var(--light-grey);
 }
 
+.serblock .panelTable tbody tr td.firstName{
+    position: relative;
+    padding-left:50px;
+}
+
 .settingsBar .pageTitle{
     display:flex;
     align-items: center;
@@ -1843,6 +1871,30 @@ body.settingsPage{
 #empDetails .userPhoto .uploadBtn i{
     margin-right:0;
 }
-.slidePanel .empSerDetails .panelTable thead th{
+.empSerDetails .panelTable thead th{
     font-weight:normal;    
+}
+.empSerDetails .panelTable tbody tr.notAssign td{
+    cursor: unset;
+    opacity: 0.5;
+}
+.empSerDetails .panelTable tbody tr.notAssign td:last-child{
+    opacity: 1;
+}
+.empSerDetails .panelTable tbody tr.notAssign{
+    cursor: unset;
+}
+.empSerDetails .panelTable tbody tr.assigned td.text-purple{
+    font-weight:500;
+}
+
+.onlineBooking .bannerImg{
+    max-height:90px;
+    overflow: hidden;
+}
+
+.bookingCode.widgetArea{
+    background:var(--soft-purple);
+    color:var(--purple);
+    white-space: pre-line;
 }

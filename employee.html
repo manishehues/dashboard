@@ -69,7 +69,7 @@
                 <h4 class="barTitle">Manage Business</h4>
             </div>
             <div class="rightSide AddNewDiscount">
-                <button class="btn btn-primary purple" data-bs-toggle="modal" data-bs-target="#exampleModal">New Employee</button>                
+                <button class="btn btn-primary purple" data-bs-toggle="modal" data-bs-target="#addNewEmployee">New Employee</button>                
             </div>                       
         </div>
         <!--End of Status Bar -->
@@ -82,9 +82,9 @@
                         <li class="menuItem"><a href="business-details.html">Business Details</a></li>
                         <li class="menuItem"><a href="discount-reasons.html">Discount Reasons</a></li>
                         <li class="menuItem"><a href="gift-cards.html">Gift Cards</a></li>
-                        <li class="menuItem active"><a href="emplaoyee.html">Employees</a></li>
+                        <li class="menuItem active"><a href="employee.html">Employees</a></li>
                         <li class="menuItem"><a href="forms.html">Forms</a></li>
-                        <li class="menuItem"><a href=";ocations.html.html">Locations</a></li>
+                        <li class="menuItem"><a href="locations.html">Locations</a></li>
                         <li class="menuItem"><a href="memberships.html">Memberships</a></li>
                         <li class="menuItem"><a href="offers.html">Offers</a></li>
                         <li class="menuItem"><a href="online-booking.html">Online Booking</a></li>
@@ -105,7 +105,7 @@
                         <div class="topPart col-12">
                             <div class="row align-items-center">
                                 <div class="panelHead col">
-                                    <h3 class="mb-0"><i class="fas fa-circle success"></i> Active Services</h3>                        
+                                    <h3 class="mb-0"><i class="fas fa-circle success"></i> Active Employees</h3>                        
                                 </div>
                                 <div class="col-3 right filterSearch staffInvite text-end">
                                     <button class="btn btn-simple p-0">Active <i class="fas fa-chevron-down"></i>
@@ -203,8 +203,8 @@
                   </button>                            
               </div>                  
               <div class="panel-header">
-                  <h5 class="panel-title pb-0">Alina </h5>
-                  <div class="tabOptions  panelTabs">
+                    <h5 class="panel-title pb-0">Alina Kravchenko</h5>
+                    <div class="tabOptions  panelTabs">
                       <ul class="nav nav-tabs" id="myTab" role="tablist">
                           <li class="nav-item" role="presentation">
                             <a class="nav-link active" id="home-tab" data-bs-toggle="tab" href="#overview" role="tab" aria-controls="home" aria-selected="true">Overview</a>
@@ -219,11 +219,11 @@
                             <a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#compensation" role="tab" aria-controls="profile" aria-selected="false">Compensation</a>
                           </li>                            
                       </ul>
-                  </div>
-              </div>
-              <div class="modal-body panelBody">                    
-                  <div class="tab-content tabContent" id="empDetails">
-                      <div class="tab-pane fade show active" id="overview" role="tabpanel" aria-labelledby="home-tab">
+                    </div>
+                </div>
+                <div class="modal-body panelBody">                    
+                    <div class="tab-content tabContent" id="empDetails">
+                        <div class="tab-pane fade show active" id="overview" role="tabpanel" aria-labelledby="home-tab">
                             <div class="row mt-5">
                                 <div class="col-4 userPhoto text-center">
                                     <div class="userImg">
@@ -347,7 +347,7 @@
                                     </div>                                                                        
                                     <div class="row g-0 mb-4">
                                         <div class="col-lg-12 col-sm-12 pe-3">
-                                            <h5 class="bigLabel text-purple">Assigned Locations</h5>                                        
+                                            <h5 class="bigLabel text-purple">Locations</h5>                                        
                                         </div>
                                         <div class="form-group col-lg-4 pe-3">
                                             <select class="mdb-select md-form form-select">
@@ -365,184 +365,367 @@
                                         </div>                                                                                                               
                                     </div>
                                 </div>
+                            </div>
+                            <div class="panel-footer ps-0 pe-0 shadow-none panel">
+                                <div class="row g-0">
+                                    <div class="col">
+                                        <button class="btn btn-danger">Deactivate</button>                                        
+                                    </div>                  
+                                    <div class="col text-end">
+                                        <button class="btn btn-primary">Save Changes</button>                            
+                                    </div>
+                                </div>
                             </div>                                                                                 
-                      </div>
-                      <div class="tab-pane fade" id="services" role="tabpanel" aria-labelledby="home-tab">
-                          <div class="row mt-5">
-                              <div class="col-sm-5 panel">
-                                  <h5 class="text-purple">Fox and Jane Salon (Upper West Side)</h5>                                  
-                              </div>
-                          </div>
-                          <div class="row g-0 mt-3 empSerDetails">
-                              <div class="col-sm-12 panel">
-                                <table class="panelTable table-sm table-hover table">
-                                    <thead>
-                                        <tr>
-                                            <th class="col-3">Smoothing and texture treatments</th>
-                                            <th></th>
-                                            <th>Price</th>
-                                            <th>Duration</th>
-                                            <th>Processing Time</th>
-                                            <th>Finishing Time</th>
-                                            <th>Transition Time</th>
-                                            <th>Business Charge</th>
-                                            <th>Commission Percentage</th>
-                                            <th></th>                                            
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td class="notAssign">Fringe Smoothing</td>
-                                            <td class="notAssign">Not Assignable</td>
-                                            <td class="notAssign">$50.00</td>
-                                            <td class="notAssign">1 hr</td>
-                                            <td class="notAssign">-</td>
-                                            <td class="notAssign">-</td>
-                                            <td class="notAssign">-</td>
-                                            <td class="notAssign">$0.00</td>
-                                            <td class="notAssign">Pay Rate Default</td>
-                                            <td class=""><button class="btn btn-simple shadow btn-sm">Customize</button></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="notAssign">Keratin Smoothing Treatment</td>
-                                            <td class="notAssign">Not Assignable</td>
-                                            <td class="notAssign">$310.00</td>
-                                            <td class="notAssign">2.30 hrs</td>
-                                            <td class="notAssign">-</td>
-                                            <td class="notAssign">-</td>
-                                            <td class="notAssign">5 mins</td>
-                                            <td class="notAssign">$0.00</td>
-                                            <td class="notAssign">Pay Rate Default</td>
-                                            <td class=""><button class="btn btn-simple shadow btn-sm">Customize</button></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="notAssign">The American Wave</td>
-                                            <td class="notAssign">Not Assignable</td>
-                                            <td class="notAssign">$415.00</td>
-                                            <td class="notAssign">3.30 hrs</td>
-                                            <td class="notAssign">-</td>
-                                            <td class="notAssign">-</td>
-                                            <td class="notAssign">5 mins</td>
-                                            <td class="notAssign">$0.00</td>
-                                            <td class="notAssign">Pay Rate Default</td>
-                                            <td class=""><button class="btn btn-simple shadow btn-sm">Customize</button></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="notAssign">Magic Sleek</td>
-                                            <td class="notAssign">Not Assignable</td>
-                                            <td class="notAssign">$350.00</td>
-                                            <td class="notAssign">2 hrs</td>
-                                            <td class="notAssign">-</td>
-                                            <td class="notAssign">-</td>
-                                            <td class="notAssign">-</td>
-                                            <td class="notAssign">$0.00</td>
-                                            <td class="notAssign">Pay Rate Default</td>
-                                            <td class=""><button class="btn btn-simple shadow btn-sm">Customize</button></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="notAssign">Brazilian Blowout</td>
-                                            <td class="notAssign">Not Assignable</td>
-                                            <td class="notAssign">$0.00</td>
-                                            <td class="notAssign">2 hr</td>
-                                            <td class="notAssign">-</td>
-                                            <td class="notAssign">-</td>
-                                            <td class="notAssign">-</td>
-                                            <td class="notAssign">$0.00</td>
-                                            <td class="notAssign">Pay Rate Default</td>
-                                            <td class=""><button class="btn btn-simple shadow btn-sm">Customize</button></td>
-                                        </tr>
-                                    </tbody>
-                                    <thead>
-                                        <tr>
-                                            <th colspan="10">Treatments</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td class="assigned">The American Wave</td>
-                                            <td class="assigned text-purple">Assignable</td>
-                                            <td class="assigned">$415.00</td>
-                                            <td class="assigned">3.30 hrs</td>
-                                            <td class="assigned">-</td>
-                                            <td class="assigned">-</td>
-                                            <td class="assigned">5 mins</td>
-                                            <td class="assigned">$0.00</td>
-                                            <td class="assigned">Pay Rate Default</td>
-                                            <td class=""><button class="btn btn-simple shadow btn-sm">Customize</button></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="assigned">Magic Sleek</td>
-                                            <td class="assigned text-purple">Assignable</td>
-                                            <td class="assigned">$350.00</td>
-                                            <td class="assigned">2 hrs</td>
-                                            <td class="assigned">-</td>
-                                            <td class="assigned">-</td>
-                                            <td class="assigned">-</td>
-                                            <td class="assigned">$0.00</td>
-                                            <td class="assigned">Pay Rate Default</td>
-                                            <td class=""><button class="btn btn-simple shadow btn-sm">Customize</button></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="assigned">Brazilian Blowout</td>
-                                            <td class="assigned text-purple">Assignable</td>
-                                            <td class="assigned">$0.00</td>
-                                            <td class="assigned">2 hr</td>
-                                            <td class="assigned">-</td>
-                                            <td class="assigned">-</td>
-                                            <td class="assigned">-</td>
-                                            <td class="assigned">$0.00</td>
-                                            <td class="assigned">Pay Rate Default</td>
-                                            <td class=""><button class="btn btn-simple shadow btn-sm">Customize</button></td>
-                                        </tr>
-                                    </tbody>
-                                </table>                                                                   
-                              </div>
-                          </div>
-                      </div>                                              
-                  </div>                      
-              </div>
-              <div class="panel-footer panel">
-                  <div class="row">
-                      <div class="col">
-                          <button class="btn btn-danger">Deactivate</button>
-                          <button class="btn btn-default ms-2">Duplicate</button>
-                      </div>                  
-                      <div class="col text-end">
-                          <button class="btn btn-primary">Save Changes</button>                            
-                      </div>
-                  </div>
-              </div>
-          </div>
+                        </div>
+                        <div class="tab-pane fade" id="services" role="tabpanel" aria-labelledby="home-tab">
+                            <div class="row mt-5">
+                                <div class="col-sm-5 panel">
+                                    <h5 class="text-purple">Fox and Jane Salon (Upper West Side)</h5>                                  
+                                </div>
+                            </div>
+                            <div class="row g-0 mt-3 empSerDetails">
+                                <div class="col-sm-12 panel">
+                                    <table class="panelTable table-sm table-hover table">
+                                        <thead>
+                                            <tr>
+                                                <th class="col-3">Smoothing and texture treatments</th>
+                                                <th></th>
+                                                <th>Price</th>
+                                                <th>Duration</th>
+                                                <th>Processing Time</th>
+                                                <th>Finishing Time</th>
+                                                <th>Transition Time</th>
+                                                <th>Business Charge</th>
+                                                <th>Commission Percentage</th>
+                                                <th></th>                                            
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="notAssign">
+                                                <td>Fringe Smoothing</td>
+                                                <td>Not Assignable</td>
+                                                <td>$50.00</td>
+                                                <td>1 hr</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td>$0.00</td>
+                                                <td>Pay Rate Default</td>
+                                                <td class=""><button class="btn btn-default border white btn-sm">Customize</button></td>
+                                            </tr>
+                                            <tr class="notAssign">
+                                                <td>Keratin Smoothing Treatment</td>
+                                                <td>Not Assignable</td>
+                                                <td>$310.00</td>
+                                                <td>2.30 hrs</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td>5 mins</td>
+                                                <td>$0.00</td>
+                                                <td>Pay Rate Default</td>
+                                                <td class=""><button class="btn btn-default border white btn-sm">Customize</button></td>
+                                            </tr>
+                                            <tr class="notAssign">
+                                                <td>The American Wave</td>
+                                                <td>Not Assignable</td>
+                                                <td>$415.00</td>
+                                                <td>3.30 hrs</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td>5 mins</td>
+                                                <td>$0.00</td>
+                                                <td>Pay Rate Default</td>
+                                                <td class=""><button class="btn btn-default border white btn-sm">Customize</button></td>
+                                            </tr>
+                                            <tr class="notAssign">
+                                                <td>Magic Sleek</td>
+                                                <td>Not Assignable</td>
+                                                <td>$350.00</td>
+                                                <td>2 hrs</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td>$0.00</td>
+                                                <td>Pay Rate Default</td>
+                                                <td class=""><button class="btn btn-default border white btn-sm">Customize</button></td>
+                                            </tr>
+                                            <tr class="notAssign">
+                                                <td>Brazilian Blowout</td>
+                                                <td>Not Assignable</td>
+                                                <td>$0.00</td>
+                                                <td>2 hr</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td>$0.00</td>
+                                                <td>Pay Rate Default</td>
+                                                <td class=""><button class="btn btn-default border white btn-sm">Customize</button></td>
+                                            </tr>
+                                        </tbody>
+                                        <thead>
+                                            <tr>
+                                                <th colspan="10">Treatments</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="assigned">
+                                                <td>The American Wave</td>
+                                                <td class="text-purple">Assignable</td>
+                                                <td>$415.00</td>
+                                                <td>3.30 hrs</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td>5 mins</td>
+                                                <td>$0.00</td>
+                                                <td>Pay Rate Default</td>
+                                                <td class=""><button class="btn btn-default border white btn-sm">Customize</button></td>
+                                            </tr>
+                                            <tr class="assigned">
+                                                <td>Magic Sleek</td>
+                                                <td class="text-purple">Assignable</td>
+                                                <td>$350.00</td>
+                                                <td>2 hrs</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td>$0.00</td>
+                                                <td>Pay Rate Default</td>
+                                                <td class=""><button class="btn btn-default border white btn-sm">Customize</button></td>
+                                            </tr>
+                                            <tr class="assigned">
+                                                <td>Brazilian Blowout</td>
+                                                <td class="text-purple">Assignable</td>
+                                                <td>$0.00</td>
+                                                <td>2 hr</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td>$0.00</td>
+                                                <td>Pay Rate Default</td>
+                                                <td class=""><button class="btn btn-default border white btn-sm">Customize</button></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>                                                                   
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="communication" role="tabpanel" aria-labelledby="home-tab">
+                            <div class="row mt-5">
+                                <div class="col-sm-4 panel">
+                                    <h5 class="text-purple">Communication Preferences <small>Rest easy knowing you'll receive immediate notifications of your clients' actions. You may customize how you would like to be notified from Boulevard.</small></h5>                                  
+                                </div>                                
+                            </div>
+                            <div class="row g-o mt-5 empCommunication">
+                                <div class="col-sm-10 panel ">
+                                    <div class="row g-0">
+                                        <div class="col">
+                                            <h5 class="bigLabel">New Online Booking <small>Sent when a client self-books an appointment.</small></h5>
+                                        </div>
+                                        <div class="col">
+                                            <div class="form-check form-switch">
+                                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                                <label class="form-check-label " for="flexSwitchCheckDefault">
+                                                    Receive Email
+                                                </label>
+                                            </div>
+                                            <div class="form-check form-switch mt-4">
+                                                <input class="form-check-input" type="checkbox" id="receTextMsg">
+                                                <label class="form-check-label " for="receTextMsg">
+                                                    Receive Text Message
+                                                </label>
+                                            </div>
+                                            <div class="form-check form-switch mt-4">
+                                                <input class="form-check-input" type="checkbox" id="pushNoti">
+                                                <label class="form-check-label " for="pushNoti">
+                                                    Receive Push Notification
+                                                </label>
+                                            </div>
+                                        </div>  
+                                    </div>
+                                </div>
+                                <div class="col-sm-10 panel mt-5">
+                                    <div class="row g-0">
+                                        <div class="col">
+                                            <h5 class="bigLabel">New Front Desk Booking <small>Sent when an appointment is added to your calendar.</small></h5>
+                                        </div>
+                                        <div class="col">
+                                            <div class="form-check form-switch">
+                                                <input class="form-check-input" type="checkbox" id="front-flexSwitchCheckDefault" checked>
+                                                <label class="form-check-label " for="front-flexSwitchCheckDefault">
+                                                    Receive Email
+                                                </label>
+                                            </div>
+                                            <div class="form-check form-switch mt-4">
+                                                <input class="form-check-input" type="checkbox" id="front-receTextMsg">
+                                                <label class="form-check-label " for="front-receTextMsg">
+                                                    Receive Text Message
+                                                </label>
+                                            </div>
+                                            <div class="form-check form-switch mt-4">
+                                                <input class="form-check-input" type="checkbox" id="front-pushNoti">
+                                                <label class="form-check-label " for="front-pushNoti">
+                                                    Receive Push Notification
+                                                </label>
+                                            </div>
+                                        </div>  
+                                    </div>
+                                </div>
+                                <div class="col-sm-10 panel mt-5">
+                                    <div class="row g-0">
+                                        <div class="col">
+                                            <h5 class="bigLabel">Client Arrival <small>Sent when a client arrives for an appointment.</small></h5>
+                                        </div>
+                                        <div class="col">
+                                            <div class="form-check form-switch">
+                                                <input class="form-check-input" type="checkbox" id="client-flexSwitchCheckDefault" >
+                                                <label class="form-check-label " for="client-front-flexSwitchCheckDefault">
+                                                    Receive Email
+                                                </label>
+                                            </div>
+                                            <div class="form-check form-switch mt-4">
+                                                <input class="form-check-input" type="checkbox" id="client-front-receTextMsg" checked>
+                                                <label class="form-check-label " for="client-front-receTextMsg">
+                                                    Receive Text Message
+                                                </label>
+                                            </div>
+                                            <div class="form-check form-switch mt-4">
+                                                <input class="form-check-input" type="checkbox" id="front-pushNoti"checked>
+                                                <label class="form-check-label " for="client-pushNoti">
+                                                    Receive Push Notification
+                                                </label>
+                                            </div>
+                                        </div>  
+                                    </div>
+                                </div>                                
+                                <div class="col-sm-10 panel mt-5 mb-5">
+                                    <div class="row g-0">
+                                        <div class="col">
+                                            <h5 class="bigLabel">Service Order Completed <small>Sent when a client arrives for an appointment.</small></h5>
+                                        </div>
+                                        <div class="col">                                            
+                                            <div class="form-check form-switch mt-4">
+                                                <input class="form-check-input" type="checkbox" id="Order-pushNoti" checked>
+                                                <label class="form-check-label " for="Order-pushNoti">
+                                                    Receive Push Notification
+                                                </label>
+                                            </div>
+                                        </div>  
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="compensation" role="tabpanel" aria-labelledby="home-tab">
+                            <div class="row mt-5">
+                                <div class="col-sm-5 panel">
+                                    <h5 class="text">Alejandra has no pay rates added yet.</h5>
+                                    <p><small>Future changes to Alejandra's pay rates should be added as new entries. You can edit historical rates for record-keeping purposes.</small></p>
+                                    <button class="btn btn-primary purple btn-lg">+ Add a pay rate</button>
+                                </div>
+                            </div>
+                        </div>                                              
+                    </div>                      
+                </div>              
+            </div>
         </div>          
       </div>
-    <div class="modal modalWrap fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal modalWrap fade " id="addNewEmployee" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable panel-lg">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">New Discount Reason</h5>
+              <h5 class="modal-title" id="exampleModalLabel"><strong>New Employee</strong></h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body modalBody row align-items-center">
               <div class="col-12">
-                <form class="row g-0 justify-content-center">
-                    <div class="form-group col-12">
-                        <label for="" class="form-label label">Discount Reason <span>*</span></label>
-                        <input type="text" class="form-control" placeholder="Your reason" />
-                    </div>                                  
-                  </form>
+                <form action="">
+                    <div class="row g-0 justify-content-center mt-4 mb-4">
+                        <div class="form-group col-6 pe-2">
+                            <label for="" class="form-label label">First Name <span>*</span></label>
+                            <input type="text" class="form-control" placeholder="" />
+                        </div>                                  
+                        <div class="form-group col-6">
+                            <label for="" class="form-label label">Last Name <span>*</span></label>
+                            <input type="text" class="form-control" placeholder="" />
+                        </div>
+                    </div>
+                    <div class="row g-0 justify-content-center mb-4">
+                        <div class="form-group col-12">
+                            <label for="" class="form-label label">Email Address <span>*</span></label>
+                            <input type="email" class="form-control" placeholder="" />
+                        </div>                                                          
+                    </div>
+                    <div class="row g-0 justify-content-center mb-4">
+                        <div class="form-group col-12">
+                            <label for="" class="form-label label">Email Address <span>*</span></label>
+                            <select class="mdb-select md-form form-select">                            
+                                <option value="1" selected>Select Staff Role *</option>
+                                <option value="2">Option 2</option>
+                                <option value="3">Option 3</option>
+                                <option value="1">Option 4</option>
+                                <option value="2">Option 5</option>
+                                <option value="3">Option 6</option>
+                                <option value="1">Option 7</option>
+                                <option value="2">Option 8</option>
+                                <option value="3">Option 9</option>
+                                <option value="1">Option 10</option>
+                                <option value="2">Option 11</option>
+                                <option value="3">Option 12</option>
+                            </select>
+                        </div>                                                          
+                    </div>
+                    <div class="row g-0 justify-content-center mb-4">
+                        <div class="form-group col-12">
+                            <label for="" class="form-label label">Privilege group <span>*</span></label>
+                            <select class="mdb-select md-form form-select">                            
+                                <option value="1" selected>Select Privilege group *</option>
+                                <option value="2">Option 2</option>
+                                <option value="3">Option 3</option>
+                                <option value="1">Option 4</option>
+                                <option value="2">Option 5</option>
+                                <option value="3">Option 6</option>
+                                <option value="1">Option 7</option>
+                                <option value="2">Option 8</option>
+                                <option value="3">Option 9</option>
+                                <option value="1">Option 10</option>
+                                <option value="2">Option 11</option>
+                                <option value="3">Option 12</option>
+                            </select>
+                        </div>                                                          
+                    </div>
+                    <div class="row g-0 justify-content-center mb-3">
+                        <div class="form-group col-12 mb-0">
+                            <label for="" class="form-label label">Location(s) <span>*</span></label>                            
+                            <select class="mdb-select md-form form-select" multiple>
+                                <option value="1">Somerville</option>
+                                <option value="2">Denver</option>
+                                <option value="3">Toronto</option>
+                                <option value="1">Little Lion</option>
+                                <option value="2">Brooklyn</option>
+                                <option value="3">San Diego</option>
+                                <option value="1">Colorado Springs</option>
+                                <option value="2">Bowery</option>
+                                <option value="3">East Village</option>
+                                <option value="1">Lower East Side</option>
+                            </select>                            
+                        </div>                                                          
+                    </div>
+                    <div class="row g-0 justify-content-center mb-4">
+                        <div class="form-check checkbox">
+                            <input class="form-check-input" name="sendMail" type="checkbox" value="" id="sendMail">
+                            <label class="form-check-label" for="sendMail"><strong>Send Email Invite</strong> <small>So your employee can sign up or login</small> </label>
+                        </div>                                                          
+                    </div>
+                </form>
               </div>
             </div> 
-            <div class="modal-footer row g-0">                
-                <div class="col ">
-                    <button type="button" class="btn btn-default"><i class="far fa-trash"></i> Delete</button>
-                </div>
-                <div class="col text-end">
-                    <button type="button" class="btn btn-primary">Save</button>
+            <div class="modal-footer row g-0">                                
+                <div class="col text-center">
+                    <button type="button" class="btn btn-primary btn-lg">Create Employee</button>
                 </div>
             </div>                     
           </div>
         </div>
-      </div>    
+    </div>
     
   
     
@@ -594,6 +777,7 @@
             }
         });
     </script>
+    
     
 </body>
 </html>
