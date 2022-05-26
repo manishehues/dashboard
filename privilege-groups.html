@@ -67,10 +67,7 @@
         <div id="settingsBar" class="statusBar settingsBar container-fluid">            
             <div class="leftSide pageTitle">
                 <h4 class="barTitle">Manage Business</h4>
-            </div>
-            <div class="rightSide AddNewDiscount">
-                <button class="btn btn-primary purple" data-bs-toggle="modal" data-bs-target="#exampleModal">New Discount Reason</button>                
-            </div>                       
+            </div>                                  
         </div>
         <!--End of Status Bar -->
         <div id="setPanelWrap" class="setWrap panelWrap bodyWrap p-0 container-fluid">
@@ -80,7 +77,7 @@
                         <li class="menuItem"><a href="apps-integrations.html">Apps & Integrations</a></li>
                         <li class="menuItem"><a href="billings.html">Billing</a></li>
                         <li class="menuItem"><a href="business-details.html">Business Details</a></li>
-                        <li class="menuItem active"><a href="discount-reasons.html">Discount Reasons</a></li>
+                        <li class="menuItem"><a href="discount-reasons.html">Discount Reasons</a></li>
                         <li class="menuItem"><a href="gift-cards.html">Gift Cards</a></li>
                         <li class="menuItem"><a href="employee.html">Employees</a></li>
                         <li class="menuItem"><a href="forms.html">Forms</a></li>
@@ -89,7 +86,7 @@
                         <li class="menuItem"><a href="offers.html">Offers</a></li>
                         <li class="menuItem"><a href="online-booking.html">Online Booking</a></li>
                         <li class="menuItem"><a href="payments-processing.html">Payment Processing</a></li>
-                        <li class="menuItem"><a href="privilege-groups.html">Privilege Groups</a></li>
+                        <li class="menuItem active"><a href="privilege-groups.html">Privilege Groups</a></li>
                         <li class="menuItem"><a href="product-categories.html">Product Categories</a></li>
                         <li class="menuItem"><a href="products.html">Products</a></li>
                         <li class="menuItem"><a href="resources.html">Referral Sources</a></li>
@@ -100,66 +97,16 @@
                         <li class="menuItem"><a href="tags.html">Tags</a></li>
                     </ul>
                 </div>
-                <div id="right" class="rightSide col panel busiDetails setBodyDetails">
-                    <div class="row g-0">
-                        <div class="topPart col-12">
-                            <div class="row">
-                                <div class="panelHead" col mb-2>
-                                    <h3 class="mb-0">Discount Reasons <small>Discount reasons are displayed within a dropdown when adding a discount during checkout, and can be selected by your front desk staff for price adjustments.</small></h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="middlePart mt-3 col-12">
-                            <div class="row g-0 mt-2">
-                                <div class="col panel serblock p-0">
-                                    <table class="panelTable shadow shadow table table-hover">
-                                        <thead>
-                                            <tr>
-                                                <th data-bs-toggle="modal" data-bs-target="#catTitle">Reason <i class="far fa-arrow-up"></i></th>                                                
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td data-bs-toggle="modal" data-bs-target="#exampleModal">Virtual Consultation </td>                                                
-                                            </tr>                                            
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
+                <div id="right" class="rightSide col panel privilege-groups setBodyDetails">
+                    <div class="row g-0">                        
+                        <div class="middlePart col-12">
+                            
                         </div>
                     </div>                    
                 </div>
             </div>
         </div>
     </div>
-    <div class="modal modalWrap fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">New Discount Reason</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body modalBody row align-items-center">
-              <div class="col-12">
-                <form class="row g-0 justify-content-center">
-                    <div class="form-group col-12">
-                        <label for="" class="form-label label">Discount Reason <span>*</span></label>
-                        <input type="text" class="form-control" placeholder="Your reason" />
-                    </div>                                  
-                  </form>
-              </div>
-            </div> 
-            <div class="modal-footer row g-0">                
-                <div class="col ">
-                    <button type="button" class="btn btn-default"><i class="far fa-trash"></i> Delete</button>
-                </div>
-                <div class="col text-end">
-                    <button type="button" class="btn btn-primary">Save</button>
-                </div>
-            </div>                     
-          </div>
-        </div>
-      </div>    
     
   
     
@@ -211,6 +158,7 @@
             }
         });
     </script>
+    
     
 </body>
 </html>

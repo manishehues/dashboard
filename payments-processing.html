@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <!-- Stylesheet -->    
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="css/mdb.min.css.css" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">        
+    <link rel="stylesheet" href="css/custom.css" type="text/css" />    
+
+    
+</head>
+<body class="dahsboard settingsPage" style="background: rgba(0, 0, 0, 0) linear-gradient(to right, rgb(48, 213, 200), rgb(255, 255, 0)) repeat scroll 0% 0%;">
+    <header id="site-header" class="siteHeader container-fluid">
+        <div class="leftSide logoNavbar">
+            <div class="SiteLogo">
+                <a href="index.html" class="customLink">
+                    <div class="logoImg">
+                        <img src="images/proLogo.png" alt="Fox and Jane Salon">
+                    </div>
+                    <div class="proName">
+                        Fox and Jane Salon <small class="loc">Bowery</small>                            
+                    </div>
+                </a>
+            </div>
+            <div class="mainSearch">
+                <div class="searchIcon">
+                    <label for="clientSearch">
+                        <i class="fas fa-search" data-bs-toggle="collapse" href="#mainSearch" role="button" aria-expanded="false" ></i>
+                    </label>
+                </div>
+                <div class="searchField collapse" id="mainSearch">
+                    <input id="clientSearch" type="search" placeholder="Search Clients">
+                </div>                
+            </div>
+            <div class="navBar">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" aria-current="page" href="index.html">Front Desk</a></li>
+                    <li class="nav-item"><a class="nav-link" href="calender.html">Calendar</a></li>
+                    <li class="nav-item"><a class="nav-link" href="clients.html">Clients</a></li>                    
+                    <li class="nav-item"><a class="nav-link" href="sales.html">Sales</a></li>                    
+                    <li class="nav-item"><a class="nav-link" href="reports.html">Reports</a></li>                    
+                    <li class="nav-item"><a class="nav-link" href="manage.html">Manage</a></li>                    
+                </ul>                
+            </div>
+        </div>            
+        <div class="rightSide accNotiSettings">
+            <div class="allSettings">
+                <div class="sngSetting allNoti">                    
+                    <a href="javascripr:void(0);" class="fal fa-bell"><span class="notCount">25</span></a>                    
+                </div>
+                <div class="sngSetting setting">                    
+                    <a href="business-details.html" class="fal fa-cog"></a>
+                </div>
+                <div class="sngSetting myAcc">                    
+                    <a href="javascripr:void(0);" class="fal fa-user-circle"></a>
+                </div>
+            </div>              
+        </div>        
+    </header>
+    <!-- Wrapper -->
+    <div id="settings" class="mainWrapper">
+        <!-- Status Bar -->
+        <div id="settingsBar" class="statusBar settingsBar container-fluid">            
+            <div class="leftSide pageTitle">
+                <h4 class="barTitle">Manage Business</h4>
+            </div>                                   
+        </div>
+        <!--End of Status Bar -->
+        <div id="setPanelWrap" class="setWrap panelWrap bodyWrap p-0 container-fluid">
+            <div class="row m-0 g-0 justify-content-end">
+                <div id="left" class="serMenu leftSide sideBarMenu p-0 col">
+                    <ul class="sideMenu">                    
+                        <li class="menuItem"><a href="apps-integrations.html">Apps & Integrations</a></li>
+                        <li class="menuItem"><a href="billings.html">Billing</a></li>
+                        <li class="menuItem"><a href="business-details.html">Business Details</a></li>
+                        <li class="menuItem"><a href="discount-reasons.html">Discount Reasons</a></li>
+                        <li class="menuItem"><a href="gift-cards.html">Gift Cards</a></li>
+                        <li class="menuItem"><a href="employee.html">Employees</a></li>
+                        <li class="menuItem"><a href="forms.html">Forms</a></li>
+                        <li class="menuItem"><a href="locations.html">Locations</a></li>
+                        <li class="menuItem"><a href="memberships.html">Memberships</a></li>
+                        <li class="menuItem"><a href="offers.html">Offers</a></li>
+                        <li class="menuItem"><a href="online-booking.html">Online Booking</a></li>
+                        <li class="menuItem active"><a href="payments-processing.html">Payment Processing</a></li>
+                        <li class="menuItem"><a href="privilege-groups.html">Privilege Groups</a></li>
+                        <li class="menuItem"><a href="product-categories.html">Product Categories</a></li>
+                        <li class="menuItem"><a href="products.html">Products</a></li>
+                        <li class="menuItem"><a href="resources.html">Referral Sources</a></li>
+                        <li class="menuItem"><a href="resources-categories.html">Resource Categories</a></li>
+                        <li class="menuItem"><a href="services.html">Services</a></li>
+                        <li class="menuItem"><a href="staff-roles.html">Staff Roles</a></li>
+                        <li class="menuItem"><a href="suppliers.html">Suppliers</a></li>
+                        <li class="menuItem"><a href="tags.html">Tags</a></li>
+                    </ul>
+                </div>
+                <div id="right" class="rightSide col panel busiDetails setBodyDetails">
+                    <div class="row g-0">
+                        <div class="topPart col-12">
+                            <div class="row align-items-center">
+                                <div class="panelHead col">
+                                    <h3 class="mb-0"><i class="fas fa-circle success"></i> Merchant Accounts</h3>                        
+                                </div>
+                                <div class="col-4 right filterSearch staffInvite text-end">
+                                    <div class="row g-0">
+                                        <div class="input-group col">                                            
+                                            <input type="text" class="form-control border" placeholder="Search locations" aria-label="Username" aria-describedby="basic-addon1">
+                                        </div>
+                                        <div class="col-5   ">
+                                            <button class="btn btn-simple p-0">Active <i class="fas fa-chevron-down"></i>                                    
+                                            <button class="btn btn-primary purple ms-3">New Merchant</button>                                    
+                                        </div>
+                                    </div>
+                                </div>                                
+                            </div>  
+                        </div>
+                        <div class="middlePart mt-3 col-12">
+                            <div class="row g-0 mt-2">
+                                <div class="col panel merAccount p-0">
+                                    <table class="panelTable shadow shadow table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th class="accName">Account Name</th>                                                
+                                                <th class="accStatus">Status</th>                                                
+                                                <th></th>                                                                                                
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Bowery</td>                                                
+                                                <td class="active">Active</td>                                                
+                                                <td class="text-end"><button data-bs-toggle="modal" data-bs-target="#merDetails" class="btn btn-default white border btn-sm">View Merchant</button></td>                                                                                                                                                
+                                            </tr>
+                                            <tr>
+                                                <td>Brooklyn</td>                                                
+                                                <td class="active">Active</td>                                                
+                                                <td class="text-end"><button data-bs-toggle="modal" data-bs-target="#merDetails" class="btn btn-default white border btn-sm">View Merchant</button></td>                                                                                                                                                
+                                            </tr>
+                                            <tr>
+                                                <td>Colorado Springs</td>                                                
+                                                <td class="active">Active</td>                                                
+                                                <td class="text-end"><button data-bs-toggle="modal" data-bs-target="#merDetails" class="btn btn-default white border btn-sm">View Merchant</button></td>                                                                                                                                                
+                                            </tr>
+                                            <tr>
+                                                <td>Denver</td>                                                
+                                                <td class="deactive">Deactive</td>                                                
+                                                <td class="text-end"><button data-bs-toggle="modal" data-bs-target="#merDetails" class="btn btn-default white border btn-sm">View Merchant</button></td>                                                                                                                                                
+                                            </tr>
+                                            <tr>
+                                                <td>Easy Village</td>                                                
+                                                <td class="active">Active</td>                                                
+                                                <td class="text-end"><button data-bs-toggle="modal" data-bs-target="#merDetails" class="btn btn-default white border btn-sm">View Merchant</button></td>                                                                                                                                                
+                                            </tr>
+                                            <tr>
+                                                <td>Little Lion</td>                                                
+                                                <td class="active">Active</td>                                                
+                                                <td class="text-end"><button data-bs-toggle="modal" data-bs-target="#merDetails" class="btn btn-default white border btn-sm">View Merchant</button></td>                                                                                                                                                
+                                            </tr>
+                                            <tr>
+                                                <td>Lower East Side</td>                                                
+                                                <td class="active">Active</td>                                                
+                                                <td class="text-end"><button data-bs-toggle="modal" data-bs-target="#merDetails" class="btn btn-default white border btn-sm">View Merchant</button></td>                                                                                                                                                
+                                            </tr>
+                                            <tr>
+                                                <td>San Diego</td>                                                
+                                                <td class="active">Active</td>                                                
+                                                <td class="text-end"><button data-bs-toggle="modal" data-bs-target="#merDetails" class="btn btn-default white border btn-sm">View Merchant</button></td>                                                                                                                                                
+                                            </tr>
+                                            <tr>
+                                                <td>Somerville</td>                                                
+                                                <td class="active">Active</td>                                                
+                                                <td class="text-end"><button data-bs-toggle="modal" data-bs-target="#merDetails" class="btn btn-default white border btn-sm">View Merchant</button></td>                                                                                                                                                
+                                            </tr>
+                                            <tr>
+                                                <td>Toronto</td>                                                
+                                                <td class="active">Active</td>                                                
+                                                <td class="text-end"><button data-bs-toggle="modal" data-bs-target="#merDetails" class="btn btn-default white border btn-sm">View Merchant</button></td>                                                                                                                                                
+                                            </tr>
+                                            <tr>
+                                                <td>Upper West Side</td>                                                
+                                                <td class="active">Active</td>                                                
+                                                <td class="text-end"><button data-bs-toggle="modal" data-bs-target="#merDetails" class="btn btn-default white border btn-sm">View Merchant</button></td>                                                                                                                                                
+                                            </tr>
+                                            <tr>
+                                                <td>Bowery</td>                                                
+                                                <td class="active">Active</td>                                                
+                                                <td class="text-end"><button data-bs-toggle="modal" data-bs-target="#merDetails" class="btn btn-default white border btn-sm">View Merchant</button></td>                                                                                                                                                
+                                            </tr>                                                                                        
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal modalWrap slidePanel fade" id="merDetails" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">          
+        <div class="panel-dialog modal-dialog modal-dialog-scrollable panel-lg">            
+          <div class="panel-content modal-content">
+              <div class="close-panel text-align-center align-middle">
+                  <button class="btn btn-simple p-0 white" data-bs-dismiss="modal" aria-label="Close">
+                      <div class="fal fa-times"></div> Close
+                  </button>                            
+              </div>                  
+              <div class="panel-header">
+                    <h5 class="panel-title pb-0">Merchant : Bowery</h5>
+                    <div class="tabOptions  panelTabs">
+                      <ul class="nav nav-tabs" id="myTab" role="tablist">
+                          <li class="nav-item" role="presentation">
+                            <a class="nav-link active" id="home-tab" data-bs-toggle="tab" href="#daily" role="tab" aria-controls="home" aria-selected="true">Daily Activity</a>
+                          </li>
+                          <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#monthly" role="tab" aria-controls="profile" aria-selected="false">Monthly Activity</a>
+                          </li>
+                          <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#disputes" role="tab" aria-controls="profile" aria-selected="false">Disputes</a>
+                          </li>
+                          <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#accInfo" role="tab" aria-controls="profile" aria-selected="false">Account Info</a>
+                          </li>                            
+                      </ul>
+                    </div>
+                </div>
+                <div class="modal-body panelBody">                    
+                    <div class="tab-content tabContent" id="empDetails">
+                        <div class="tab-pane fade show active" id="daily" role="tabpanel" aria-labelledby="home-tab">
+                            <div class="row g-0 mt-4 ">
+                                <div class="col-sm-12 panel">
+                                    <table class="panelTable table-sm table-hover table">
+                                        <thead>
+                                            <tr>
+                                                <th>Transferred on</th>
+                                                <th>Arrive On</th>
+                                                <th>Amount</th>
+                                                <th>Status</th>
+                                                <th></th>                                                                                            
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Wednesday, May 25, 2022</td>
+                                                <td>Thursday, May 26, 2022</td>
+                                                <td>$13,222.06</td>
+                                                <td>Processed</td>
+                                                <td class="text-end col-2"><button class="btn btn-default white border btn-sm"><i class="ms-0 far fa-download"></i> Download CSV</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Wednesday, May 25, 2022</td>
+                                                <td>Thursday, May 26, 2022</td>
+                                                <td>$13,222.06</td>
+                                                <td>Processed</td>
+                                                <td class="text-end col-2"><button class="btn btn-default white border btn-sm"><i class="ms-0 far fa-download"></i> Download CSV</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Wednesday, May 25, 2022</td>
+                                                <td>Thursday, May 26, 2022</td>
+                                                <td>$13,222.06</td>
+                                                <td>Processed</td>
+                                                <td class="text-end col-2"><button class="btn btn-default white border btn-sm"><i class="ms-0 far fa-download"></i> Download CSV</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Wednesday, May 25, 2022</td>
+                                                <td>Thursday, May 26, 2022</td>
+                                                <td>$13,222.06</td>
+                                                <td>Processed</td>
+                                                <td class="text-end col-2"><button class="btn btn-default white border btn-sm"><i class="ms-0 far fa-download"></i> Download CSV</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Wednesday, May 25, 2022</td>
+                                                <td>Thursday, May 26, 2022</td>
+                                                <td>$13,222.06</td>
+                                                <td>Processed</td>
+                                                <td class="text-end col-2"><button class="btn btn-default white border btn-sm"><i class="ms-0 far fa-download"></i> Download CSV</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Wednesday, May 25, 2022</td>
+                                                <td>Thursday, May 26, 2022</td>
+                                                <td>$13,222.06</td>
+                                                <td>Processed</td>
+                                                <td class="text-end col-2"><button class="btn btn-default white border btn-sm"><i class="ms-0 far fa-download"></i> Download CSV</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Wednesday, May 25, 2022</td>
+                                                <td>Thursday, May 26, 2022</td>
+                                                <td>$13,222.06</td>
+                                                <td>Processed</td>
+                                                <td class="text-end col-2"><button class="btn btn-default white border btn-sm"><i class="ms-0 far fa-download"></i> Download CSV</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Wednesday, May 25, 2022</td>
+                                                <td>Thursday, May 26, 2022</td>
+                                                <td>$13,222.06</td>
+                                                <td>Processed</td>
+                                                <td class="text-end col-2"><button class="btn btn-default white border btn-sm"><i class="ms-0 far fa-download"></i> Download CSV</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Wednesday, May 25, 2022</td>
+                                                <td>Thursday, May 26, 2022</td>
+                                                <td>$13,222.06</td>
+                                                <td>Processed</td>
+                                                <td class="text-end col-2"><button class="btn btn-default white border btn-sm"><i class="ms-0 far fa-download"></i> Download CSV</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Wednesday, May 25, 2022</td>
+                                                <td>Thursday, May 26, 2022</td>
+                                                <td>$13,222.06</td>
+                                                <td>Processed</td>
+                                                <td class="text-end col-2"><button class="btn btn-default white border btn-sm"><i class="ms-0 far fa-download"></i> Download CSV</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Wednesday, May 25, 2022</td>
+                                                <td>Thursday, May 26, 2022</td>
+                                                <td>$13,222.06</td>
+                                                <td>Processed</td>
+                                                <td class="text-end col-2"><button class="btn btn-default white border btn-sm"><i class="ms-0 far fa-download"></i> Download CSV</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Wednesday, May 25, 2022</td>
+                                                <td>Thursday, May 26, 2022</td>
+                                                <td>$13,222.06</td>
+                                                <td>Processed</td>
+                                                <td class="text-end col-2"><button class="btn btn-default white border btn-sm"><i class="ms-0 far fa-download"></i> Download CSV</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Wednesday, May 25, 2022</td>
+                                                <td>Thursday, May 26, 2022</td>
+                                                <td>$13,222.06</td>
+                                                <td>Processed</td>
+                                                <td class="text-end col-2"><button class="btn btn-default white border btn-sm"><i class="ms-0 far fa-download"></i> Download CSV</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Wednesday, May 25, 2022</td>
+                                                <td>Thursday, May 26, 2022</td>
+                                                <td>$13,222.06</td>
+                                                <td>Processed</td>
+                                                <td class="text-end col-2"><button class="btn btn-default white border btn-sm"><i class="ms-0 far fa-download"></i> Download CSV</button></td>
+                                            </tr>                                            
+                                        </tbody>                                                                             
+                                    </table>                                                                   
+                                </div>
+                            </div>                                                                                                           
+                        </div>
+                        <div class="tab-pane fade" id="monthly" role="tabpanel" aria-labelledby="home-tab">
+                            <div class="row g-o mt-4">
+                                <div class="col-sm-12 panel">
+                                    <table class="panelTable table-sm table-hover table">
+                                        <thead>
+                                            <tr>
+                                                <th>Month</th>
+                                                <th>Settled Charges</th>
+                                                <th>Settled Refunds</th>
+                                                <th>Transaction Fees</th>
+                                                <th>Net Settled</th>
+                                                <th>Adjustments</th>
+                                                <th></th>                                                                                            
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>May 2022</td>
+                                                <td>$260,210.35</td>
+                                                <td>-$148.80</td>
+                                                <td>-$5,858.37</td>
+                                                <td>$254,203.18</td>
+                                                <td>-$561.66</td>
+                                                <td class="text-end"><button class="btn btn-default white border btn-sm"><i class="ms-0 far fa-download"></i> Download CSV</button></td>
+                                            </tr>                                                                                   
+                                            <tr>
+                                                <td>May 2022</td>
+                                                <td>$260,210.35</td>
+                                                <td>-$148.80</td>
+                                                <td>-$5,858.37</td>
+                                                <td>$254,203.18</td>
+                                                <td>-$561.66</td>
+                                                <td class="text-end"><button class="btn btn-default white border btn-sm"><i class="ms-0 far fa-download"></i> Download CSV</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>May 2022</td>
+                                                <td>$260,210.35</td>
+                                                <td>-$148.80</td>
+                                                <td>-$5,858.37</td>
+                                                <td>$254,203.18</td>
+                                                <td>-$561.66</td>
+                                                <td class="text-end"><button class="btn btn-default white border btn-sm"><i class="ms-0 far fa-download"></i> Download CSV</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>May 2022</td>
+                                                <td>$260,210.35</td>
+                                                <td>-$148.80</td>
+                                                <td>-$5,858.37</td>
+                                                <td>$254,203.18</td>
+                                                <td>-$561.66</td>
+                                                <td class="text-end"><button class="btn btn-default white border btn-sm"><i class="ms-0 far fa-download"></i> Download CSV</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>May 2022</td>
+                                                <td>$260,210.35</td>
+                                                <td>-$148.80</td>
+                                                <td>-$5,858.37</td>
+                                                <td>$254,203.18</td>
+                                                <td>-$561.66</td>
+                                                <td class="text-end"><button class="btn btn-default white border btn-sm"><i class="ms-0 far fa-download"></i> Download CSV</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>May 2022</td>
+                                                <td>$260,210.35</td>
+                                                <td>-$148.80</td>
+                                                <td>-$5,858.37</td>
+                                                <td>$254,203.18</td>
+                                                <td>-$561.66</td>
+                                                <td class="text-end"><button class="btn btn-default white border btn-sm"><i class="ms-0 far fa-download"></i> Download CSV</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>May 2022</td>
+                                                <td>$260,210.35</td>
+                                                <td>-$148.80</td>
+                                                <td>-$5,858.37</td>
+                                                <td>$254,203.18</td>
+                                                <td>-$561.66</td>
+                                                <td class="text-end"><button class="btn btn-default white border btn-sm"><i class="ms-0 far fa-download"></i> Download CSV</button></td>
+                                            </tr>
+                                        </tbody>                                                                             
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="disputes" role="tabpanel" aria-labelledby="home-tab">
+                            <div class="row g-o mt-4">
+                                <div class="col-sm-12 panel">
+                                    <table class="panelTable table-sm table-hover table">
+                                        <thead>
+                                            <tr>
+                                                <th>Respond By</th>
+                                                <th>Client</th>
+                                                <th>Cardholder Name</th>
+                                                <th>Amount</th>
+                                                <th class="col-2 text-end">Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Tuesday, April 13, 2021</td>
+                                                <td>Taylor Goldstein</td>
+                                                <td>Taylor Goldstein</td>
+                                                <td>$111.47</td>                                                
+                                                <td class="col-2 text-end"><button class="btn btn-default white border btn-sm">View Dispute</button></td>
+                                            </tr>                                                                                                                               
+                                            <tr>
+                                                <td>Tuesday, April 13, 2021</td>
+                                                <td>Taylor Goldstein</td>
+                                                <td>Taylor Goldstein</td>
+                                                <td>$111.47</td>                                                
+                                                <td class="col-2 text-end"><button class="btn btn-default white border btn-sm">View Dispute</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Tuesday, April 13, 2021</td>
+                                                <td>Taylor Goldstein</td>
+                                                <td>Taylor Goldstein</td>
+                                                <td>$111.47</td>                                                
+                                                <td class="col-2 text-end"><button class="btn btn-default white border btn-sm">View Dispute</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Tuesday, April 13, 2021</td>
+                                                <td>Taylor Goldstein</td>
+                                                <td>Taylor Goldstein</td>
+                                                <td>$111.47</td>                                                
+                                                <td class="col-2 text-end"><button class="btn btn-default white border btn-sm">View Dispute</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Tuesday, April 13, 2021</td>
+                                                <td>Taylor Goldstein</td>
+                                                <td>Taylor Goldstein</td>
+                                                <td>$111.47</td>                                                
+                                                <td class="col-2 text-end"><button class="btn btn-default white border btn-sm">View Dispute</button></td>
+                                            </tr>
+                                        </tbody>                                                                             
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="accInfo" role="tabpanel" aria-labelledby="home-tab">
+                            <div class="row mt-5">
+                                <div class="col-sm-9 panel">
+                                    <h5>Merchant Account: Bowery <small>Approved settlements will be transferred via ACH to the bank account below. Changes to your account details will take effect immediately, and will not affect transfers in progress.</small></h5>
+                                </div>
+                                <div class="col-sm-6 panel">
+                                    <div class="row g-0 form-group align-items-center mt-3">
+                                        <div class="col">
+                                            <h5 class="bigLabel">Current Banking Routing #:</h5>                                            
+                                        </div>
+                                        <div class="col">
+                                            <input type="text" class="form-control border-0 shadow-none" value="211370150">
+                                        </div>
+                                    </div>
+                                    <div class="row g-0 form-group align-items-center mt-3">
+                                        <div class="col">
+                                            <h5 class="bigLabel">Current Banking Account #:</h5>                                            
+                                        </div>
+                                        <div class="col">
+                                            <input type="text" class="form-control border-0 shadow-none" value="...2550">
+                                        </div>
+                                    </div>
+                                    <div class="row g-0 form-group align-items-center mt-3">
+                                        <div class="col">
+                                            <h5 class="bigLabel">Contact email for dispute updates:</h5>                                            
+                                        </div>
+                                        <div class="col">
+                                            <input type="text" class="form-control border-0 shadow-none" value="billy@foxandjanesalon.com">
+                                        </div>
+                                    </div>
+                                    <div class="row g-0 mt-3">
+                                        <div class="col">
+                                            <p class="text-grey">Want to add your bank account info automatically? <a href="#" class="text-purple">Connect your bank</a></p>
+                                        </div>                                        
+                                    </div>
+                                </div>                                
+                            </div>
+                        </div>                                              
+                    </div>                      
+                </div>              
+            </div>
+        </div>          
+      </div>
+    <div class="modal modalWrap fade " id="addNewEmployee" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable panel-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel"><strong>New Employee</strong></h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body modalBody row align-items-center">
+              <div class="col-12">
+                <form action="">
+                    <div class="row g-0 justify-content-center mt-4 mb-4">
+                        <div class="form-group col-6 pe-2">
+                            <label for="" class="form-label label">First Name <span>*</span></label>
+                            <input type="text" class="form-control" placeholder="" />
+                        </div>                                  
+                        <div class="form-group col-6">
+                            <label for="" class="form-label label">Last Name <span>*</span></label>
+                            <input type="text" class="form-control" placeholder="" />
+                        </div>
+                    </div>
+                    <div class="row g-0 justify-content-center mb-4">
+                        <div class="form-group col-12">
+                            <label for="" class="form-label label">Email Address <span>*</span></label>
+                            <input type="email" class="form-control" placeholder="" />
+                        </div>                                                          
+                    </div>
+                    <div class="row g-0 justify-content-center mb-4">
+                        <div class="form-group col-12">
+                            <label for="" class="form-label label">Email Address <span>*</span></label>
+                            <select class="mdb-select md-form form-select">                            
+                                <option value="1" selected>Select Staff Role *</option>
+                                <option value="2">Option 2</option>
+                                <option value="3">Option 3</option>
+                                <option value="1">Option 4</option>
+                                <option value="2">Option 5</option>
+                                <option value="3">Option 6</option>
+                                <option value="1">Option 7</option>
+                                <option value="2">Option 8</option>
+                                <option value="3">Option 9</option>
+                                <option value="1">Option 10</option>
+                                <option value="2">Option 11</option>
+                                <option value="3">Option 12</option>
+                            </select>
+                        </div>                                                          
+                    </div>
+                    <div class="row g-0 justify-content-center mb-4">
+                        <div class="form-group col-12">
+                            <label for="" class="form-label label">Privilege group <span>*</span></label>
+                            <select class="mdb-select md-form form-select">                            
+                                <option value="1" selected>Select Privilege group *</option>
+                                <option value="2">Option 2</option>
+                                <option value="3">Option 3</option>
+                                <option value="1">Option 4</option>
+                                <option value="2">Option 5</option>
+                                <option value="3">Option 6</option>
+                                <option value="1">Option 7</option>
+                                <option value="2">Option 8</option>
+                                <option value="3">Option 9</option>
+                                <option value="1">Option 10</option>
+                                <option value="2">Option 11</option>
+                                <option value="3">Option 12</option>
+                            </select>
+                        </div>                                                          
+                    </div>
+                    <div class="row g-0 justify-content-center mb-3">
+                        <div class="form-group col-12 mb-0">
+                            <label for="" class="form-label label">Location(s) <span>*</span></label>                            
+                            <select class="mdb-select md-form form-select" multiple>
+                                <option value="1">Somerville</option>
+                                <option value="2">Denver</option>
+                                <option value="3">Toronto</option>
+                                <option value="1">Little Lion</option>
+                                <option value="2">Brooklyn</option>
+                                <option value="3">San Diego</option>
+                                <option value="1">Colorado Springs</option>
+                                <option value="2">Bowery</option>
+                                <option value="3">East Village</option>
+                                <option value="1">Lower East Side</option>
+                            </select>                            
+                        </div>                                                          
+                    </div>
+                    <div class="row g-0 justify-content-center mb-4">
+                        <div class="form-check checkbox">
+                            <input class="form-check-input" name="sendMail" type="checkbox" value="" id="sendMail">
+                            <label class="form-check-label" for="sendMail"><strong>Send Email Invite</strong> <small>So your employee can sign up or login</small> </label>
+                        </div>                                                          
+                    </div>
+                </form>
+              </div>
+            </div> 
+            <div class="modal-footer row g-0">                                
+                <div class="col text-center">
+                    <button type="button" class="btn btn-primary btn-lg">Create Employee</button>
+                </div>
+            </div>                     
+          </div>
+        </div>
+    </div>
+    
+  
+    
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script> 
+    <script src="js/mdb.min.js"></script> 
+    <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js"></script>    
+    <script>
+        $('#datepicker').datepicker({
+            uiLibrary: 'bootstrap4',
+            format: 'ddd, dd mmm yyyy'
+        });
+        $(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip();           
+        });
+        $(document).ready(function() {
+                $('.mdb-select').materialSelect();
+            });
+        
+        $(document).on('click', function (e){
+            /* bootstrap collapse js adds "in" class to your collapsible element*/
+            var menu_opened = $('#staffFullList').hasClass('show');
+        
+            if(!$(e.target).closest('#staffFullList').length &&
+                !$(e.target).is('#staffFullList') &&
+                menu_opened === true){
+                    $('#staffFullList').collapse('toggle');
+            }
+        });
+        $(document).on('click', function (e){
+            /* bootstrap collapse js adds "in" class to your collapsible element*/
+            var menu_opened = $('#allTags').hasClass('show');
+        
+            if(!$(e.target).closest('#allTags').length &&
+                !$(e.target).is('#allTags') &&
+                menu_opened === true){
+                    $('#allTags').collapse('toggle');
+            }
+        });
+        $(document).on('click', function (e){
+            /* bootstrap collapse js adds "in" class to your collapsible element*/
+            var menu_opened = $('#mainSearch').hasClass('show');
+        
+            if(!$(e.target).closest('#mainSearch').length &&
+                !$(e.target).is('#mainSearch') &&
+                menu_opened === true){
+                    $('#mainSearch').collapse('toggle');
+            }
+        });
+    </script>
+    
+    
+</body>
+</html>

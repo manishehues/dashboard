@@ -23,7 +23,7 @@
     --light-pink:#c560c5;
     --table-td-hover:rgba(124, 67, 253, 0.05);
     /* Transition Speed */
-    --aniSpeed: 0.3s;
+    --aniSpeed: 0.3s;   
 }
 
 .success{color:var(--light-green)}
@@ -35,6 +35,9 @@
 
 .text-purple{
     color:var(--purple)!important
+}
+.text-grey{
+    color:var(--grey)!important;
 }
 input:focus{    
     border:none!important;
@@ -83,11 +86,22 @@ a{
     transition: all var(--aniSpeed) ease;
 }
 
+/*============Status===========*/
+
+.status{
+    background:var()
+}
+
+
+
+
 /*============Button===========*/
 
+
 .btn i{
-    font-size:16px;
+    font-size:12px;
     margin-right:5px;
+    font-weight:normal
 }
 
 .btn{
@@ -531,6 +545,19 @@ img{
     background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
 }
 
+.form-control::placeholder{
+    opacity: 0.4;
+}
+
+.input-group .form-control{    
+    font-size:14px;
+    box-shadow:none        
+}
+.input-group .form-control.border:focus,
+.input-group .form-control.border:focus-visible{
+    border:1px solid var(--purple)!important ;
+}
+
 
 /*==========Modal==========*/
 
@@ -644,6 +671,27 @@ img{
     margin-left:5px;    
     font-weight:bold       
 }
+
+.panelTable tbody tr td.active::before{
+    width:10px;
+    height:10px;
+    border-radius:100px;
+    background:var(--light-green);
+    content:'';
+    margin-right:5px;
+    display:inline-block;
+}
+.panelTable tbody tr td.deactive::before{
+    width:10px;
+    height:10px;
+    border-radius:100px;
+    background:var(--grey);
+    content:'';
+    margin-right:5px;
+    display:inline-block;
+    opacity: 0.4;
+}
+
 .panelTable tbody tr td i.fas{
     opacity: 0;
 }
@@ -753,12 +801,13 @@ img{
     border:none;
     background:none;
     padding:10px 24px;
-    font-size:14px;
+    font-size:13px;
     color:var(--grey);
 }
 .panelTabs .nav-item .nav-link.active{
     color:var(--purple);
-    box-shadow: inset 0px -3px 0px 0px var(--purple);    
+    box-shadow: inset 0px -3px 0px 0px var(--purple);   
+    font-weight:500
 }
 .slidePanel .panelTable thead th{
     font-size:16px;
@@ -784,6 +833,7 @@ img{
 .slidePanel .panelTable.table-sm thead tr th{            
     font-size:14px;
     font-weight:600;
+    padding:14px 20px
 }
 .slidePanel .panelTable.table-sm tbody tr td{
     font-size:13px;
